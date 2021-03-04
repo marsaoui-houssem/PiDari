@@ -23,18 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/TaskRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/UserDariRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/AccountServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/DariApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/DariApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/RoleDari.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/UserDari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/UserDari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,12 +74,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/esprit/dari/services" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\services" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\controller" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\dao" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities" />
@@ -98,15 +95,13 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -129,6 +124,7 @@
       <updated>1614778228744</updated>
       <workItem from="1614778230366" duration="3670000" />
       <workItem from="1614786188199" duration="9955000" />
+      <workItem from="1614805436496" duration="16386000" />
     </task>
     <servers />
   </component>
@@ -148,62 +144,70 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1614792686535">
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1614818792493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614792686535" />
-    <state width="1306" height="228" key="GridCell.Tab.0.bottom" timestamp="1614802882412">
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1614818792493" />
+    <state x="429" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614817719653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1306" height="228" key="GridCell.Tab.0.center" timestamp="1614802882412">
+    <state x="429" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1614817719653" />
+    <state width="1306" height="104" key="GridCell.Tab.0.bottom" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1306" height="228" key="GridCell.Tab.0.left" timestamp="1614802882411">
+    <state width="1306" height="104" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.0.center" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614802882411" />
-    <state width="1306" height="228" key="GridCell.Tab.0.right" timestamp="1614802882412">
+    <state width="1306" height="104" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.0.left" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1306" height="228" key="GridCell.Tab.1.bottom" timestamp="1614802882413">
+    <state width="1306" height="104" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.0.right" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614802882413" />
-    <state width="1306" height="228" key="GridCell.Tab.1.center" timestamp="1614802882412">
+    <state width="1306" height="104" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.1.bottom" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1306" height="228" key="GridCell.Tab.1.left" timestamp="1614802882412">
+    <state width="1306" height="104" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.1.center" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1306" height="228" key="GridCell.Tab.1.right" timestamp="1614802882412">
+    <state width="1306" height="104" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.1.left" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="228" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614802882412" />
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1614791423720">
+    <state width="1306" height="104" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.1.right" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614791423720" />
-    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1614791423720">
+    <state width="1306" height="104" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.2.bottom" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1614791423720" />
-    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1614791423720">
+    <state width="1306" height="104" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.2.center" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1614791423720" />
-    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1614791423720">
+    <state width="1306" height="104" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.2.left" timestamp="1614822574406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1614791423720" />
+    <state width="1306" height="104" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
+    <state width="1306" height="104" key="GridCell.Tab.2.right" timestamp="1614822574406">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1306" height="104" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1614822574406" />
     <state x="183" y="10" key="SettingsEditor" timestamp="1614787500923">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="183" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614787500923" />
+    <state width="498" height="468" key="SwitcherDM" timestamp="1614821185575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="468" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1614821185575" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614790972314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

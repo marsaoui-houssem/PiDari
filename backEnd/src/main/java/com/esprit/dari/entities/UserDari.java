@@ -20,9 +20,9 @@ public class UserDari implements Serializable {
 
     @Column(unique = true)
     private String username;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+   // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
-    private boolean actived;
+   // private boolean actived;
     @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<Role> roles=new ArrayList<>();
+    private Collection<RoleDari> roleDaris =new ArrayList<>();
 }
