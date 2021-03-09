@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.stream.Stream;
 
-@SpringBootApplication (exclude = {SecurityAutoConfiguration.class} )
+@SpringBootApplication (exclude = { SecurityAutoConfiguration.class })
 public class DariApplication implements CommandLineRunner {
     @Autowired
     private AccountService accountService;
