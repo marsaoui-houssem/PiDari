@@ -1,21 +1,21 @@
 package com.esprit.dari.entities;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 
-@Data @AllArgsConstructor @NoArgsConstructor
+@Data
 @Entity
 public class Assurence implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id ;
+    private int idAssu ;
 
     private String nomAssu ;
     private String descAssu ;
@@ -26,12 +26,29 @@ public class Assurence implements Serializable {
 
 
 
-    public int getId() {
-        return id;
+
+
+
+    public Assurence(String nomAssu, String descAssu, String dureAss, float prixAss) {
+        this.nomAssu = nomAssu;
+        this.descAssu = descAssu;
+        this.dureAss = dureAss;
+        this.prixAss = prixAss;
+
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+    public Assurence(){
+        super();
+    }
+
+
+    public int getIdAssu() {
+        return idAssu;
+    }
+
+    public void setIdAssu(int idAssu) {
+        this.idAssu = idAssu;
     }
 
     public String getNomAssu() {
@@ -72,5 +89,18 @@ public class Assurence implements Serializable {
 
     public void setAbonnement(Abonnement abonnement) {
         this.abonnement = abonnement;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Assurence{" +
+                "idAssu=" + idAssu +
+                ", nomAssu='" + nomAssu + '\'' +
+                ", descAssu='" + descAssu + '\'' +
+                ", dureAss='" + dureAss + '\'' +
+                ", prixAss=" + prixAss +
+                ", abonnement=" + abonnement +
+                '}';
     }
 }

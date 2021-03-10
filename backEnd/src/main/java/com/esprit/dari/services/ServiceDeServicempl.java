@@ -1,0 +1,68 @@
+package com.esprit.dari.services;
+
+
+
+import com.esprit.dari.dao.IAbonnementRepository;
+import com.esprit.dari.dao.IServiceRepository;
+import com.esprit.dari.entities.Abonnement;
+import com.esprit.dari.entities.OffreService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import java.util.List;
+
+
+@Service
+public class ServiceDeServicempl  implements  IServiceDeService {
+
+    @Autowired
+    IServiceRepository serRep ;
+
+
+    @Autowired
+    IAbonnementRepository abonRep ;
+
+
+    @Override
+    public int  ajoutService( OffreService serv){
+        serRep.save(serv);
+
+        return serv.getIdServ();
+    }
+
+    @Override
+    public List<OffreService> getAllService(){
+
+        return (List<OffreService>) serRep.findAll();
+    }
+
+
+    @Override
+    public OffreService getByIdService (int id )
+    {
+        return serRep.findById(id).get();
+    }
+
+
+    @Override
+    public void deleteService(int id ){
+        OffreService serv = serRep.findById(id).orElse(null);
+        serRep.delete(serv);
+
+
+    }
+
+    @Override
+    public void affecteServiceAabonn (int idAbon, int idServ  ){
+
+        OffreService serv =  serRep.findById(idServ).orElse(null);
+        Abonnement ab = abonRep.findById(idAbon).orElse(null);
+
+        serv.setAbonnement(ab);
+        serRep.save(serv);
+
+    }
+
+
+}

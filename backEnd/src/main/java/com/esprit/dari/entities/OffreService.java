@@ -8,15 +8,13 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 public class OffreService implements Serializable {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  int id ;
+    private  int idServ ;
 
     private String nomServ ;
 
@@ -30,13 +28,25 @@ public class OffreService implements Serializable {
     @ManyToOne(cascade = CascadeType.PERSIST)
     private  Abonnement abonnement;
 
-
-    public int getId() {
-        return id;
+    public OffreService(String nomServ, String descSer, String dureService, float prixServ, Abonnement abonnement) {
+        this.nomServ = nomServ;
+        this.descSer = descSer;
+        this.dureService = dureService;
+        this.prixServ = prixServ;
+        this.abonnement = abonnement;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public OffreService(){
+        super();
+    }
+
+
+    public int getIdServ() {
+        return idServ;
+    }
+
+    public void setIdServ(int idServ) {
+        this.idServ = idServ;
     }
 
     public String getNomServ() {
@@ -72,4 +82,15 @@ public class OffreService implements Serializable {
     }
 
 
+    @Override
+    public String toString() {
+        return "Service{" +
+                "idServ=" + idServ +
+                ", nomServ='" + nomServ + '\'' +
+                ", descSer='" + descSer + '\'' +
+                ", dureService='" + dureService + '\'' +
+                ", prixServ=" + prixServ +
+                ", abonnement=" + abonnement +
+                '}';
+    }
 }
