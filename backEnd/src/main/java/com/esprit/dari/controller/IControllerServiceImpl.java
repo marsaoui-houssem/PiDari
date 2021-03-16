@@ -47,9 +47,8 @@ public class IControllerServiceImpl   {
        serserv.deleteService(id);}
 
 
-    public void affecteServiceAabonn ( int idAbon , int idServ){
-     serserv.affecteServiceAabonn(idAbon ,idServ);
-
+    public void affecteServiceAabonn ( int idServ  , int idAbon ){
+        serserv.affecteServiceAabonn(idServ,idAbon);
     }
 
     public List<OffreService> getListService() {

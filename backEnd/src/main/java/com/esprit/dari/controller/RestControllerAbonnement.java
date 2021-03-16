@@ -1,6 +1,8 @@
 package com.esprit.dari.controller;
 
 import com.esprit.dari.entities.Abonnement;
+import com.esprit.dari.entities.Assurence;
+import com.esprit.dari.entities.OffreService;
 import com.esprit.dari.services.IAbonnementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -45,6 +47,19 @@ public class RestControllerAbonnement {
     public void deleteAbonn(@PathVariable("id") int id  ){
       abonserv.deleteAbonn(id);
     }
+
+    @GetMapping(value = "/getAllAssubyAbon/{idAbon}")
+    @ResponseBody
+    public List<Assurence> getAllAssubyAbon (@PathVariable("idAbon")   int idAbon ){
+       return  abonserv.getAllAssubyAbon(idAbon);
+    }
+
+    @GetMapping(value = "/getAllServbyAbon/{idAbon}")
+    @ResponseBody
+    public List<OffreService> getAllServbyAbon (@PathVariable("idAbon")   int idAbon ){
+        return  abonserv.getAllServbyAbon(idAbon);
+    }
+
 
 
 }

@@ -8,6 +8,9 @@ import com.esprit.dari.entities.Assurence;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -49,14 +52,27 @@ public class AssurenceServiceImpl implements IAssurenceService {
 
     }
 
-  @Override
-     public void affecteAssurAbonn (int idAbon, int idAssu  ){
+     @Override
+     public void affecteAssurAbonn ( int idAssu  ,  int idAbon){
 
-      Assurence as =  assRep.findById(idAssu).orElse(null);
-      Abonnement ab = abonRep.findById(idAbon).orElse(null);
+        Assurence ass = assRep.findById(idAssu).get();
+        Abonnement abon = abonRep.findById(idAbon).get();
 
-         as.setAbonnement(ab);
-         assRep.save(as);
+        if (abon.getAssurences() == null ){
+
+            List<Assurence> assuren = new ArrayList<>();
+            assuren.add(ass);
+            abon.setAssurences(assuren);
+            abonRep.save(abon);
+        }
+        else {
+            abon.getAssurences().add(ass);
+            abonRep.save(abon);
+        }
+
+
+
+
 
     }
 

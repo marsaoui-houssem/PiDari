@@ -1,15 +1,19 @@
 package com.esprit.dari.entities;
 
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
 
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 
 @Data
 @Entity
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 public class Assurence implements Serializable {
 
 
@@ -20,20 +24,28 @@ public class Assurence implements Serializable {
     private String nomAssu ;
     private String descAssu ;
     private  String dureAss ;
+    @Temporal(TemporalType.DATE)
+    private Date dateDebutAssu ;
+    @Temporal(TemporalType.DATE)
+    private Date dateFintAssu ;
     private float prixAss ;
-    @ManyToOne(cascade = CascadeType.PERSIST)
-     private Abonnement abonnement;
+
+
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "Assurences",fetch=FetchType.EAGER )
+    private List<Abonnement> AssAbon ;
 
 
 
 
-
-
-    public Assurence(String nomAssu, String descAssu, String dureAss, float prixAss) {
+    public Assurence(String nomAssu, String descAssu, String dureAss, float prixAss , Date dateDebutAssu , Date dateFintAssu ) {
         this.nomAssu = nomAssu;
         this.descAssu = descAssu;
         this.dureAss = dureAss;
         this.prixAss = prixAss;
+        this.dateDebutAssu = dateDebutAssu;
+        this.dateFintAssu = dateFintAssu ;
 
     }
 
@@ -83,12 +95,28 @@ public class Assurence implements Serializable {
         this.prixAss = prixAss;
     }
 
-    public Abonnement getAbonnement() {
-        return abonnement;
+    public Date getDateDebutAssu() {
+        return dateDebutAssu;
     }
 
-    public void setAbonnement(Abonnement abonnement) {
-        this.abonnement = abonnement;
+    public void setDateDebutAssu(Date dateDebutAssu) {
+        this.dateDebutAssu = dateDebutAssu;
+    }
+
+    public Date getDateFintAssu() {
+        return dateFintAssu;
+    }
+
+    public void setDateFintAssu(Date dateFintAssu) {
+        this.dateFintAssu = dateFintAssu;
+    }
+
+    public List<Abonnement> getAssAbon() {
+        return AssAbon;
+    }
+
+    public void setAssAbon(List<Abonnement> assAbon) {
+        AssAbon = assAbon;
     }
 
 
@@ -99,8 +127,10 @@ public class Assurence implements Serializable {
                 ", nomAssu='" + nomAssu + '\'' +
                 ", descAssu='" + descAssu + '\'' +
                 ", dureAss='" + dureAss + '\'' +
+                ", dateDebutAssu=" + dateDebutAssu +
+                ", dateFintAssu=" + dateFintAssu +
                 ", prixAss=" + prixAss +
-                ", abonnement=" + abonnement +
+                ", AssAbon=" + AssAbon +
                 '}';
     }
 }

@@ -51,9 +51,9 @@ public class RestControllerAssurence {
     }
 
 
-     @PutMapping("/affAssAbonn/{idAbon}/{idAssu}")
-     public void affecteAssurAbonn (@PathVariable("idAbon") int idAbon,@PathVariable("idAssu") int idAssu  ){
-        assuServ.affecteAssurAbonn(idAbon,idAssu);
-    }
+     @PutMapping(value = "/affAssAbonn/{idAssu}/{idAbon}")
+    public void affecteAssurAbonn (@PathVariable("idAssu") int idAssu ,@PathVariable("idAbon") int idAbon ){
+        assuServ.affecteAssurAbonn(idAssu , idAbon);
+   }
 
 }

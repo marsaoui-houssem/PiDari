@@ -2,6 +2,7 @@ package com.esprit.dari.controller;
 
 
 import com.esprit.dari.entities.Abonnement;
+import com.esprit.dari.entities.Assurence;
 import com.esprit.dari.services.IAbonnementService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,6 +41,11 @@ public class IControllerAbonnementImpl {
     public void deleteAbonn(int id  ){
         abonserv.deleteAbonn(id);
     }
+
+    public List<Assurence> getAllAssubyAbon (int idAbon ){
+        return abonserv.getAllAssubyAbon(idAbon);
+    }
+
 
 
       ///////////////////////////////////////

@@ -52,9 +52,9 @@ public class RestControllerService {
         serserv.deleteService(id);}
 
 
-    @PutMapping("/affAssAbonn/{idAbon}/{idServ}")
-    public void affecteServiceAabonn (@PathVariable("idAbon") int idAbon ,@PathVariable("idServ") int idServ){
-        serserv.affecteServiceAabonn(idAbon ,idServ);
+   @PutMapping("/affServAbonn/{idServ}/{idAbon}")
+    public void affecteServiceAabonn (@PathVariable("idServ") int idServ  ,@PathVariable("idAbon") int idAbon ){
+        serserv.affecteServiceAabonn(idServ, idAbon);
 
     }
 

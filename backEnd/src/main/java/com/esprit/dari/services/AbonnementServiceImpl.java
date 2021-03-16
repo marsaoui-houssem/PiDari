@@ -1,7 +1,11 @@
 package com.esprit.dari.services;
 
 import com.esprit.dari.dao.IAbonnementRepository;
+import com.esprit.dari.dao.IAssurenceRepository;
+import com.esprit.dari.dao.IServiceRepository;
 import com.esprit.dari.entities.Abonnement;
+import com.esprit.dari.entities.Assurence;
+import com.esprit.dari.entities.OffreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +18,12 @@ public class AbonnementServiceImpl implements IAbonnementService {
 
     @Autowired
     IAbonnementRepository abonRep;
+
+    @Autowired
+    IAssurenceRepository assRep ;
+
+    @Autowired
+    IServiceRepository servRep ;
 
 
     @Override
@@ -42,4 +52,12 @@ public class AbonnementServiceImpl implements IAbonnementService {
 
 
     }
+    @Override
+    public List<Assurence> getAllAssubyAbon (int idAbon ){ return  assRep.getAllAssubyAbon(idAbon);
+    }
+    @Override
+    public List<OffreService> getAllServbyAbon (int idAbon){
+        return servRep.getAllServbyAbon(idAbon);
+    }
+
 }

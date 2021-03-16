@@ -1,14 +1,19 @@
 package com.esprit.dari.entities;
 
 
+import com.fasterxml.jackson.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
 @Data
 @Entity
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class)
 public class OffreService implements Serializable {
 
 
@@ -24,16 +29,25 @@ public class OffreService implements Serializable {
 
     private float prixServ ;
 
+    private Date datedebutService ;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    private  Abonnement abonnement;
+    private Date dateFintService ;
 
-    public OffreService(String nomServ, String descSer, String dureService, float prixServ, Abonnement abonnement) {
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "Services",fetch=FetchType.EAGER )
+    private List<Abonnement> ServAbon ;
+
+
+
+
+    public OffreService(String nomServ, String descSer, String dureService, float prixServ,Date datedebutService,Date dateFintService) {
         this.nomServ = nomServ;
         this.descSer = descSer;
         this.dureService = dureService;
         this.prixServ = prixServ;
-        this.abonnement = abonnement;
+        this.datedebutService=datedebutService;
+        this.dateFintService=dateFintService;
     }
 
     public OffreService(){
@@ -82,15 +96,41 @@ public class OffreService implements Serializable {
     }
 
 
+    public Date getDatedebutService() {
+        return datedebutService;
+    }
+
+    public void setDatedebutService(Date datedebutService) {
+        this.datedebutService = datedebutService;
+    }
+
+    public Date getDateFintService() {
+        return dateFintService;
+    }
+
+    public void setDateFintService(Date dateFintService) {
+        this.dateFintService = dateFintService;
+    }
+
+    public List<Abonnement> getServAbon() {
+        return ServAbon;
+    }
+
+    public void setServAbon(List<Abonnement> servAbon) {
+        ServAbon = servAbon;
+    }
+
     @Override
     public String toString() {
-        return "Service{" +
+        return "OffreService{" +
                 "idServ=" + idServ +
                 ", nomServ='" + nomServ + '\'' +
                 ", descSer='" + descSer + '\'' +
                 ", dureService='" + dureService + '\'' +
                 ", prixServ=" + prixServ +
-                ", abonnement=" + abonnement +
+                ", datedebutService=" + datedebutService +
+                ", dateFintService=" + dateFintService +
+                ", ServAbon=" + ServAbon +
                 '}';
     }
 }

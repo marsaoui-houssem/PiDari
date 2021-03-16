@@ -11,5 +11,5 @@ public interface IServiceDeService {
     public List<OffreService> getAllService();
     public OffreService getByIdService (int id );
     public void deleteService(int id);
-    public void affecteServiceAabonn (int idAbon, int idServ  );
+    public void affecteServiceAabonn ( int idServ  , int idAbon );
 }

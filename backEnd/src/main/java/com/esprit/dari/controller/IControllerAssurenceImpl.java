@@ -43,8 +43,8 @@ public class IControllerAssurenceImpl {
         assuServ.deleteAssurence(id);
     }
 
-    public void affecteAssurAbonn (int idAbon, int idAssu  ){
-        assuServ.affecteAssurAbonn(idAbon,idAssu);
+    public void affecteAssurAbonn ( int idAssu  ,  int idAbon){
+        assuServ.affecteAssurAbonn(idAssu, idAbon);
     }
 
 
