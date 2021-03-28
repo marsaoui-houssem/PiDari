@@ -1,7 +1,7 @@
-package com.esprit.dari.services;
+package com.esprit.dari.services.userservice;
 
-import com.esprit.dari.entities.RoleDari;
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.RoleDari;
+import com.esprit.dari.entities.userentity.UserDari;
 
 import java.util.List;
 
@@ -12,6 +12,8 @@ public interface AccountService  {
     public UserDari loadUserByUsername(String username);
     public void addRoleToUser(String username,String rolename);
     public List<UserDari> getAllUser();
-    public void deleteUserById(int userId);
-    public void updateMotDePasse(String password);
+    public void deleteUserById(long userId);
+    public void updateMotDePasse(long userId, String password);
+    public UserDari loadUserByEmail(String email);
+
 }

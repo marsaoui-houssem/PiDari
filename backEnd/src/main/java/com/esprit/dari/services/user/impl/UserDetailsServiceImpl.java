@@ -1,6 +1,6 @@
-package com.esprit.dari.services;
+package com.esprit.dari.services.userservice;
 
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.UserDari;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -28,4 +28,5 @@ public class UserDetailsServiceImp implements UserDetailsService {
         });
         return new User(user.getUsername(),user.getPassword(),authorities);
     }
+
 }
