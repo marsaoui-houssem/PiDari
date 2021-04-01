@@ -1,5 +1,7 @@
 package com.esprit.dari.entities.userentity;
 
+import com.esprit.dari.entities.creditentitie.DemandeCredit;
+import com.esprit.dari.entities.userentity.RoleDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
@@ -20,18 +22,20 @@ public class UserDari implements Serializable {
     private String password;
     private String firstName;
     private String lastName;
+    private String PhoneNumber;
     private String email;
-    private boolean activated = false;
+    private boolean activated;
     private String imageUrl;
-    private String activationKey;
 
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<RoleDari> roleDaris =new ArrayList<>();
 
+
     public UserDari() {
     }
 
-    public UserDari(Long userId, String username, String password, String firstName, String lastName, String email, boolean activated, String imageUrl, String activationKey, Collection<RoleDari> roleDaris) {
+
+    public UserDari(Long userId, String username, String password, String firstName, String lastName, String email, boolean activated, String imageUrl, Collection<RoleDari> roleDaris) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -40,7 +44,6 @@ public class UserDari implements Serializable {
         this.email = email;
         this.activated = activated;
         this.imageUrl = imageUrl;
-        this.activationKey = activationKey;
         this.roleDaris = roleDaris;
     }
 
@@ -123,19 +126,19 @@ public class UserDari implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public String getActivationKey() {
-        return activationKey;
-    }
-
-    public void setActivationKey(String activationKey) {
-        this.activationKey = activationKey;
-    }
-
     public Collection<RoleDari> getRoleDaris() {
         return roleDaris;
     }
 
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
     public void setRoleDaris(Collection<RoleDari> roleDaris) {
         this.roleDaris = roleDaris;
     }
+
 }

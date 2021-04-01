@@ -1,16 +1,22 @@
-package com.esprit.dari.controller;
+package com.esprit.dari.controller.usercontroller;
 
 
 import com.esprit.dari.controller.dto.RegisterForm;
 import com.esprit.dari.entities.userentity.UserDari;
-import com.esprit.dari.services.userservice.AccountService;
+import com.esprit.dari.services.user.AccountService;
+import com.esprit.dari.services.user.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.List;
 
 
 @RestController
+@RequestMapping("user")
 public class AccountRestController {
 
 
@@ -20,50 +26,48 @@ public class AccountRestController {
 
 
 
-
-
-
-
-
-
-
     @PostMapping("/register")
-    public UserDari register(@RequestBody RegisterForm userForm){
-        if (!userForm.getPassword().equals(userForm.getRepassword()))
-            throw new RuntimeException("you must confirm your password");
+    public UserDari register(@RequestBody RegisterForm userForm) throws MessagingException {
 
-        UserDari username=accountService.loadUserByUsername(userForm.getUsername());
-        if (username!=null) throw new RuntimeException("this User is already exists");
-        UserDari usermail=accountService.loadUserByEmail(userForm.getEmail());
-        UserDari userDari = new UserDari();
-        userDari.setEmail(userForm.getEmail());
-        userDari.setUsername(userForm.getUsername());
-        userDari.setPassword(userForm.getPassword());
-        accountService.saveUser(userDari);
-        accountService.addRoleToUser(userForm.getUsername(),"USER");
-        return userDari;
+        return accountService.register(userForm);
     }
 
     // URL : http://localhost:8081/dari/getAllUsers
     @GetMapping(value = "/getAllUsers")
-    @ResponseBody
     public List<UserDari> getAllUser() {
         return accountService.getAllUser();
     }
+    // URL : http://localhost:8081/dari/getAllUsers
+
+//    @GetMapping(value = "/send")
+//    public void send() throws MessagingException {
+//        emailService.sendSimpleMessage("imededdine.marsaoui@esprit.tn","test","email work");
+//    }
 
     // URL : http://localhost:8081/dari/deleteUserById/1
     @DeleteMapping("/deleteUserById/{id}")
-    @ResponseBody
     public void deleteUserById(@PathVariable("id") int UserId) {
         accountService.deleteUserById(UserId);
     }
 
   //  Modifier mdp : http://localhost:8081/dari/updatepassword/1/password
-    @PutMapping(value = "/updatepassword/{id}/{password}")
-    @ResponseBody
-    public void updateMotDePasse(@PathVariable("password") String password, @PathVariable("id") int userId) {
-        accountService.updateMotDePasse(userId,password);
 
+    @PutMapping(value = "/updatepassword/{password}")
+    public void updateMotDePasse(@PathVariable("password") String password, Authentication authentication) {
+        String email = (String) authentication.getPrincipal();
+        accountService.updateMotDePasse(email,password);
+
+
+    }
+
+    @PatchMapping("/forgetpassword")
+    public void forgetpassword(@RequestBody RegisterForm userForm) throws MessagingException {
+        accountService.resetPassword(userForm);
+    }
+
+    @PatchMapping("/confirmaccount")
+    public void confirmAccount(Authentication authentication) {
+        accountService.comfirm(authentication);
     }
 
 

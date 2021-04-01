@@ -1,6 +1,6 @@
 package com.esprit.dari.security;
 
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.UserDari;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -53,8 +53,11 @@ System.out.println("***************************************");
                 .setExpiration(new Date(System.currentTimeMillis()+SecurityConstants.EXPIRATION_TIME))
                 .signWith(SignatureAlgorithm.HS256, SecurityConstants.SecretKey)
                 .claim("roles",springuser.getAuthorities())
+
+
                 .compact();
         response.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX+jwt);
 
     }
+
 }

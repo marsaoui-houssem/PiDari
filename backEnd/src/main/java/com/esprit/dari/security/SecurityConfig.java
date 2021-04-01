@@ -1,27 +1,27 @@
 package com.esprit.dari.security;
 
 
-import com.esprit.dari.services.UserDetailsServiceImp;
+import com.esprit.dari.entities.EmailType;
+import com.esprit.dari.services.user.impl.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private UserDetailsServiceImp userDetailsServiceImp;
+    private UserDetailsServiceImpl userDetailsServiceImpl;
     //springboot n'instanssi pas Bcript par default crre un ben dans l'app
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .withUser("admin").password("{noop}admin").roles("ADMIN","USER")
 //                .and()
 //        .withUser("user").password("{noop}user").roles("USER");
-        auth.userDetailsService(userDetailsServiceImp).passwordEncoder(bCryptPasswordEncoder);
+        auth.userDetailsService(userDetailsServiceImpl).passwordEncoder(bCryptPasswordEncoder);
     }
 
     @Override
@@ -42,8 +42,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //ce formulere generer par spring desactiver le au phase front-end
         //http.formLogin();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.authorizeRequests().antMatchers("/login/**", "/register/**").permitAll();
+        http.authorizeRequests().antMatchers("/login/**","/makecall/**", "/user/register/**","/user/forgetpassword").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/tasks/**").hasAuthority("ADMIN");
+        http.authorizeRequests().antMatchers(HttpMethod.PATCH,"/user/updatepassword/**").hasAuthority(EmailType.PASSWORD.name());
+        http.authorizeRequests().antMatchers(HttpMethod.PATCH,"/user/confirmaccount/**").hasAuthority(EmailType.CONFIRAMTION.name());
         http.authorizeRequests().anyRequest().authenticated();
         http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
         http.addFilterBefore(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);

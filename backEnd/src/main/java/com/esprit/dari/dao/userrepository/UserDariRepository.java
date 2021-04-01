@@ -9,5 +9,6 @@ import org.springframework.stereotype.Repository;
 public interface UserDariRepository extends JpaRepository<UserDari,Long> {
     public UserDari findByUsername (String userName);
     public UserDari findByEmail (String email);
-    public UserDari findByEmailIgnoreCase(String email);
+
+
 }
