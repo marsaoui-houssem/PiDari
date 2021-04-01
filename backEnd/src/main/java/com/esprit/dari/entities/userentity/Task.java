@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Data @AllArgsConstructor @NoArgsConstructor
+
 @Entity
     public class Task implements Serializable {
         @Id
@@ -20,4 +20,59 @@ import java.time.LocalDateTime;
         private LocalDateTime dateTask;
     @ManyToOne(fetch = FetchType.EAGER)
     private UserDari userDaris ;
+
+    public Task(Long id, String taskName, CallEtats callRequest, LocalDateTime dateTask, UserDari userDaris) {
+        this.id = id;
+        this.taskName = taskName;
+        this.callRequest = callRequest;
+        this.dateTask = dateTask;
+        this.userDaris = userDaris;
+    }
+
+    public Task(Long id) {
+        this.id = id;
+    }
+
+    public Task() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
+
+    public CallEtats getCallRequest() {
+        return callRequest;
+    }
+
+    public void setCallRequest(CallEtats callRequest) {
+        this.callRequest = callRequest;
+    }
+
+    public LocalDateTime getDateTask() {
+        return dateTask;
+    }
+
+    public void setDateTask(LocalDateTime dateTask) {
+        this.dateTask = dateTask;
+    }
+
+    public UserDari getUserDaris() {
+        return userDaris;
+    }
+
+    public void setUserDaris(UserDari userDaris) {
+        this.userDaris = userDaris;
+    }
 }

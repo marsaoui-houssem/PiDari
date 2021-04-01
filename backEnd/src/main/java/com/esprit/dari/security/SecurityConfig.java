@@ -42,8 +42,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //ce formulere generer par spring desactiver le au phase front-end
         //http.formLogin();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.authorizeRequests().antMatchers("/login/**","/makecall/**", "/user/register/**","/user/forgetpassword").permitAll();
+        http.authorizeRequests().antMatchers("/login/**", "/user/register/**","/user/forgetpassword").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.POST,"/tasks/**").hasAuthority("ADMIN");
+        http.authorizeRequests().antMatchers(HttpMethod.POST,"/savetasks/**").hasAuthority("USER");
+        http.authorizeRequests().antMatchers(HttpMethod.GET,"/tasks/**","/trasability/**").hasAuthority("ADMIN");
+        http.authorizeRequests().antMatchers(HttpMethod.DELETE,"/user/deleteUserById/**").hasAuthority("ADMIN");
         http.authorizeRequests().antMatchers(HttpMethod.PATCH,"/user/updatepassword/**").hasAuthority(EmailType.PASSWORD.name());
         http.authorizeRequests().antMatchers(HttpMethod.PATCH,"/user/confirmaccount/**").hasAuthority(EmailType.CONFIRAMTION.name());
         http.authorizeRequests().anyRequest().authenticated();

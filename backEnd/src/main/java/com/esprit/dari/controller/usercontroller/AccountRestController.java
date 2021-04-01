@@ -67,6 +67,7 @@ public class AccountRestController {
 
     @PatchMapping("/confirmaccount")
     public void confirmAccount(Authentication authentication) {
+
         accountService.comfirm(authentication);
     }
 

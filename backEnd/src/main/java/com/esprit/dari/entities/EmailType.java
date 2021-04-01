@@ -1,8 +1,8 @@
 package com.esprit.dari.entities;
 
 public enum EmailType {
-    PASSWORD("resetpassword","rest password", 1000),
-    CONFIRAMTION("confiramtionaccount","comfirm account", 10000);
+    PASSWORD("resetpassword","rest password", 864_000_000),
+    CONFIRAMTION("confiramtionaccount","comfirm account", 864_000_000);
 
     private final String path;
     private final String subject;

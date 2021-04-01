@@ -4,7 +4,7 @@ import com.twilio.Twilio;
 
 public class CallConstants {
     public final static String SID_ACCOUNT = "ACf66bc3a0d82b4d663553494773220c30";
-    public final static String AUTH_ID = "e6914fdf4c71b107861333924837fdca";
+    public final static String AUTH_ID = "d0c4dd4f26e26fb889a0479b1b86fa8d";
     public final static String FROM_NUMBER="+16173792102";
     public final static String TO_NUMBER ="+21650713446";
 

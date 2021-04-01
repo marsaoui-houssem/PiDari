@@ -1,4 +1,4 @@
-package com.esprit.dari;
+package com.esprit.dari.aop;
 
 import com.esprit.dari.services.user.TrasabilityService;
 import org.aspectj.lang.JoinPoint;

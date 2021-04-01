@@ -28,6 +28,8 @@ public class CallServiceImpl implements CallService {
     private AccountService accountService;
     @Autowired
     private TaskRepository taskRepository;
+    @Autowired
+    CallService callService;
 
 
     @Override
@@ -47,7 +49,7 @@ public class CallServiceImpl implements CallService {
 
     @Override
     public Task treatTask(Long taskId, CallEtats callEtats) {
-        Task task = taskRepository.findById(taskId).orElseThrow(RuntimeException::new);
+        Task task = taskRepository.findById(taskId).get();
         task.setCallRequest(callEtats);
         if(CallEtats.called.equals(callEtats)){
             try {

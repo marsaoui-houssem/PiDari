@@ -114,6 +114,7 @@ public class AccountServiceImpl implements AccountService {
         userDari.setEmail(userForm.getEmail());
         userDari.setUsername(userForm.getUsername());
         userDari.setPassword(userForm.getPassword());
+        userDari.setPhoneNumber(userForm.getNumPhone());
         userDari.setActivated(false);
         saveUser(userDari);
         addRoleToUser(userForm.getUsername(),"USER");

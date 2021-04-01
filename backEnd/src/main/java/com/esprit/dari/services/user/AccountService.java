@@ -10,18 +10,18 @@ import java.util.List;
 
 
 public interface AccountService  {
-    public UserDari saveUser(UserDari user);
-    public RoleDari saveRole(RoleDari role);
-    public UserDari loadUserByUsername(String username);
-    public void addRoleToUser(String username,String rolename);
-    public List<UserDari> getAllUser();
-    public void deleteUserById(long userId);
-    public void updateMotDePasse(String email, String password);
-    public UserDari loadUserByEmail(String email);
-
+     UserDari saveUser(UserDari user);
+     RoleDari saveRole(RoleDari role);
+     UserDari loadUserByUsername(String username);
+     void addRoleToUser(String username,String rolename);
+     List<UserDari> getAllUser();
+     void deleteUserById(long userId);
+     void updateMotDePasse(String email, String password);
+     UserDari loadUserByEmail(String email);
+   // void updatefirstNameAndlastById(String firstName, String lastName, String numTel, int UserDariId);
     void resetPassword(RegisterForm userForm) throws MessagingException;
 
-    void comfirm(Authentication authentication);
+    void  comfirm(Authentication authentication);
 
     UserDari register(RegisterForm userForm) throws MessagingException;
 }

@@ -19,4 +19,5 @@ public interface CallService {
      Task saveTask(Task task, Authentication authentication);
     Task treatTask(Long taskId, CallEtats callEtats);
     List<Task> find(CallEtats callEtats, LocalDateTime minDate);
+
 }

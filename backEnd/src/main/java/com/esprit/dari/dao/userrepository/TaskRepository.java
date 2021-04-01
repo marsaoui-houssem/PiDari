@@ -8,10 +8,12 @@ import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task,Long> {
-    public List<Task> findAllByCallRequest (String etatRequest);
-    public List<Task> findAllByDateTaskGreaterThanEqual (LocalDateTime minDate);
-    public List<Task> findAllByDateTaskGreaterThanEqualAndCallRequest (LocalDateTime minDate,String etatRequest);
+     List<Task> findAllByCallRequest (String etatRequest);
+     List<Task> findAllByDateTaskGreaterThanEqual (LocalDateTime minDate);
+     List<Task> findAllByDateTaskGreaterThanEqualAndCallRequest (LocalDateTime minDate,String etatRequest);
+
 }

@@ -47,17 +47,19 @@ public class UserDari implements Serializable {
         this.roleDaris = roleDaris;
     }
 
-    public UserDari(Long userId, String username, String password, Collection<RoleDari> roleDaris) {
+    public UserDari(Long userId, String username, String password,boolean activated ,Collection<RoleDari> roleDaris) {
         this.userId = userId;
         this.username = username;
         this.password = password;
+        this.activated = activated;
         this.roleDaris = roleDaris;
     }
 
-    public UserDari(Long userId, String username, String password, String email, Collection<RoleDari> roleDaris) {
+    public UserDari(Long userId, String username, String password, String email,boolean activated, Collection<RoleDari> roleDaris) {
         this.username = username;
         this.password = password;
         this.email = email;
+        this.activated =activated;
         this.roleDaris = roleDaris;
     }
 

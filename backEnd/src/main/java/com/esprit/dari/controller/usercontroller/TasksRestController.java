@@ -23,7 +23,7 @@ public class TasksRestController {
         return callService.find(callEtats,minDate);
 
     }
-    @PostMapping ("/tasks")
+    @PostMapping ("/savetasks")
     @ResponseBody
     public Task save(@RequestBody Task task, Authentication authentication){
         return callService.saveTask(task,authentication);
