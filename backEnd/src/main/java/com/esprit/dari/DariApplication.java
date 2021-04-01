@@ -48,7 +48,7 @@ public class DariApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-      accountService.saveUser(new UserDari(null,"admin","admin","imededdine.marsaoui@esprit.tn",true,null));
+      accountService.saveUser(new UserDari(null,"admin","admin","houssemeddine.marsaoui@esprit.tn",true,null));
       accountService.saveUser(new UserDari(null,"user","user",true,null));
         accountService.saveRole(new RoleDari(null,"ADMIN"));
         accountService.saveRole(new RoleDari(null,"USER"));

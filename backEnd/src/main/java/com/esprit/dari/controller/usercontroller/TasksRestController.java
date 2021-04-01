@@ -5,10 +5,13 @@ import com.esprit.dari.services.user.CallService;
 
 import com.esprit.dari.entities.userentity.Task;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @RestController
@@ -19,8 +22,9 @@ public class TasksRestController {
     // URL : http://localhost:8081/dari/tasks
     @GetMapping ("/tasks")
     @ResponseBody
-    public List<Task> taskList(@RequestParam(value = "callEtats", required = false) CallEtats callEtats,@RequestParam(value = "minDate", required = false) LocalDateTime minDate ){
-        return callService.find(callEtats,minDate);
+    public List<Task> taskList(@RequestParam(value = "callEtats", required = false) CallEtats callEtats, @RequestParam(value = "minDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate minDate  ){
+
+        return callService.find(callEtats,LocalDateTime.of(minDate, LocalTime.MIDNIGHT));
 
     }
     @PostMapping ("/savetasks")
