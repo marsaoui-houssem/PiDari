@@ -26,6 +26,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/creditrepository/BankRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/creditrepository/DemandeCrRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/userrepository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/userrepository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Banque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/DemandeCredit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Profession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/userentity/UserDari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/userentity/UserDari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/CallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/CallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/CallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/CallServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +94,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.esprit.dari.services.user.impl" />
+      <recent name="com.esprit.dari.services.userservice" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\controller\usercontroller\registration" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\creditentitie" />
@@ -137,6 +161,7 @@
       <workItem from="1616920473674" duration="8234000" />
       <workItem from="1617039096646" duration="7676000" />
       <workItem from="1617095893246" duration="48185000" />
+
       <workItem from="1618474397144" duration="3294000" />
     </task>
     <servers />
@@ -169,10 +194,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617124480248" />
+
     <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1618479996335">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1618479996335" />
+
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1617273298898">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617273298898" />
     <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1617231175666">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -217,6 +248,7 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+
     <state width="1323" height="190" key="GridCell.Tab.1.bottom" timestamp="1617305081527">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
