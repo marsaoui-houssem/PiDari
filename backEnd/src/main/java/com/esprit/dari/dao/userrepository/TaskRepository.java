@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task,Long> {
-     List<Task> findAllByCallRequest (String etatRequest);
+     List<Task> findAllByCallRequest (String callRequest);
      List<Task> findAllByDateTaskGreaterThanEqual (LocalDateTime minDate);
      List<Task> findAllByDateTaskGreaterThanEqualAndCallRequest (LocalDateTime minDate,String etatRequest);
 

@@ -62,16 +62,16 @@ public class CallServiceImpl implements CallService {
     }
 
     @Override
-    public List<Task> find(CallEtats callEtats, LocalDateTime minDate) {
+    public List<Task> find(CallEtats callRequest, LocalDateTime minDate) {
         List<Task> result;
-        if(callEtats==null&&minDate==null){
+        if(callRequest==null&&minDate==null){
             result  = taskRepository.findAll();
         }else if(minDate == null){
-            result = taskRepository.findAllByCallRequest(callEtats.name());
-        }else if(callEtats ==null) {
+            result = taskRepository.findAllByCallRequest(callRequest.toString());
+        }else if(callRequest ==null) {
             result = taskRepository.findAllByDateTaskGreaterThanEqual(minDate);
         }else {
-            result = taskRepository.findAllByDateTaskGreaterThanEqualAndCallRequest(minDate,callEtats.name());
+            result = taskRepository.findAllByDateTaskGreaterThanEqualAndCallRequest(minDate,callRequest.toString());
         }
         return result;
     }

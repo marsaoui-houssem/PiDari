@@ -22,9 +22,9 @@ public class TasksRestController {
     // URL : http://localhost:8081/dari/tasks
     @GetMapping ("/tasks")
     @ResponseBody
-    public List<Task> taskList(@RequestParam(value = "callEtats", required = false) CallEtats callEtats, @RequestParam(value = "minDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate minDate  ){
+    public List<Task> taskList(@RequestParam(value = "callRequest", required = false) CallEtats callRequest, @RequestParam(value = "minDate", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate minDate ){
 
-        return callService.find(callEtats,LocalDateTime.of(minDate, LocalTime.MIDNIGHT));
+        return callService.find(callRequest,LocalDateTime.of(minDate, LocalTime.MIDNIGHT));
 
     }
     @PostMapping ("/savetasks")

@@ -1,6 +1,6 @@
 package com.esprit.dari.entities.userentity;
 
-import com.esprit.dari.entities.creditentitie.DemandeCredit;
+
 import com.esprit.dari.entities.userentity.RoleDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
