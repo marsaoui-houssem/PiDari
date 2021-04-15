@@ -85,6 +85,7 @@ public class AccountServiceImpl implements AccountService {
         return userDariRepository.findByEmail(email);
     }
 
+
     @Override
     public void resetPassword(RegisterForm userForm) throws MessagingException {
         UserDari usermail = loadUserByEmail(userForm.getEmail());
@@ -122,14 +123,12 @@ public class AccountServiceImpl implements AccountService {
         emailService.sendComfirmationMessage(userForm.getEmail());
         return userDari;
     }
+    @Override
+    public void updatefirstNameAndlastById(String firstName, String lastName, Long userId) {
+        UserDari user = userDariRepository.findById(userId).get();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        userDariRepository.save(user);
+    }
 
-
-//    @Override
-//    public void updatefirstNameAndlastNameAndnumTelById(String firstName, String lastName, String numTel, int employeId) {
-//        User user = userRepository.findById(employeId).get();
-//        user.setFirstName(firstName);
-//        user.setLastName(lastName);
-//        user.setNumTel(numTel);
-//        userRepository.save(user);
-//    }
 }

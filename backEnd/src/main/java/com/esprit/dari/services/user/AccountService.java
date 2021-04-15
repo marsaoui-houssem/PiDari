@@ -18,7 +18,7 @@ public interface AccountService  {
      void deleteUserById(long userId);
      void updateMotDePasse(String email, String password);
      UserDari loadUserByEmail(String email);
-   // void updatefirstNameAndlastById(String firstName, String lastName, String numTel, int UserDariId);
+    void updatefirstNameAndlastById(String firstName, String lastName, Long userId);
     void resetPassword(RegisterForm userForm) throws MessagingException;
 
     void  comfirm(Authentication authentication);
