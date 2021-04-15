@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data @AllArgsConstructor @NoArgsConstructor
 @Entity
-    public class Role implements Serializable {
+    public class RoleDari implements Serializable {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
