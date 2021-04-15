@@ -2,7 +2,7 @@ package com.esprit.dari.entities.AdAppointment;
 import java.io.Serializable;
 import java.util.Set;
 
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.UserDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.CascadeType;

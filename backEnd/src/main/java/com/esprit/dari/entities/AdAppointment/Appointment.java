@@ -1,6 +1,6 @@
 package com.esprit.dari.entities.AdAppointment;
 
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.UserDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;

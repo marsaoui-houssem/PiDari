@@ -1,14 +1,8 @@
 package com.esprit.dari;
 
-import com.esprit.dari.dao.TaskRepository;
-import com.esprit.dari.entities.Task;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
-
-import java.util.stream.Stream;
 
 @SpringBootApplication (exclude = {SecurityAutoConfiguration.class} )
 public class DariApplication  {

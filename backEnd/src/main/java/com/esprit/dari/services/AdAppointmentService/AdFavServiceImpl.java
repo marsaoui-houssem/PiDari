@@ -2,10 +2,10 @@ package com.esprit.dari.services.AdAppointmentService;
 
 import com.esprit.dari.dao.AdAppointmentRepository.AdFavRepository;
 import com.esprit.dari.dao.AdAppointmentRepository.AdRepository;
-import com.esprit.dari.dao.UserDariRepository;
+import com.esprit.dari.dao.userrepository.UserDariRepository;
 import com.esprit.dari.entities.AdAppointment.AdFav;
 import com.esprit.dari.entities.AdAppointment.Ad;
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.userentity.UserDari;
 import com.esprit.dari.services.AdAppointmentService.interfaces.AdFavService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.esprit.dari.entities.AdAppointment.Ad;
 import com.esprit.dari.dao.AdAppointmentRepository.AdRepository;
-import com.esprit.dari.dao.UserDariRepository;
+import com.esprit.dari.dao.userrepository.UserDariRepository;
 import com.esprit.dari.services.AdAppointmentService.interfaces.AdService;
 
 import java.util.List;

@@ -2,7 +2,7 @@ package com.esprit.dari.services.AdAppointmentService;
 
 import com.esprit.dari.dao.AdAppointmentRepository.AdRepository;
 import com.esprit.dari.dao.AdAppointmentRepository.AppointmentRepository;
-import com.esprit.dari.dao.UserDariRepository;
+import com.esprit.dari.dao.userrepository.UserDariRepository;
 import com.esprit.dari.entities.AdAppointment.Appointment;
 
 import com.esprit.dari.services.AdAppointmentService.interfaces.NotificationService;

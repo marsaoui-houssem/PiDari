@@ -1,4 +1,4 @@
-package com.esprit.dari.entities;
+package com.esprit.dari.entities.userentity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -5,7 +5,7 @@ import com.esprit.dari.services.AdAppointmentService.interfaces.AdFavService;
 import com.esprit.dari.dao.AdAppointmentRepository.AppointmentRepository;
 import com.esprit.dari.dao.AdAppointmentRepository.NotificationRepository;
 
-import com.esprit.dari.dao.UserDariRepository;
+import com.esprit.dari.dao.userrepository.UserDariRepository;
 import com.esprit.dari.entities.AdAppointment.Notification;
 import com.esprit.dari.services.AdAppointmentService.interfaces.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
