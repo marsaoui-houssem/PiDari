@@ -1,5 +1,8 @@
 package com.esprit.dari;
 
+
+import com.esprit.dari.services.CreditServices.IBankService;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.esprit.dari.dao.userrepository.TaskRepository;
 import com.esprit.dari.entities.CallEtats;
 import com.esprit.dari.entities.userentity.RoleDari;
@@ -21,6 +24,7 @@ import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
 import com.twilio.type.PhoneNumber;
 
+
 import java.net.URI;
 import java.util.stream.Stream;
 
@@ -37,6 +41,7 @@ public class DariApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(DariApplication.class, args);
+
     }
 
     @Bean
