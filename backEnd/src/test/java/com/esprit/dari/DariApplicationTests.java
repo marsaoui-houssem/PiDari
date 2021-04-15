@@ -1,13 +1,19 @@
 package com.esprit.dari;
 
 import org.junit.jupiter.api.Test;
+//
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class DariApplicationTests {
+import java.text.ParseException;
 
-    @Test
-    void contextLoads() {
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+
+public class DariApplicationTests {
+
+   // @Test
+   public void contextLoads() {
+
     }
 
 }
