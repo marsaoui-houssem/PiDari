@@ -1,7 +1,7 @@
-package com.esprit.dari.dao;
+package com.esprit.dari.dao.AdAppointmentRepository;
 
 
-import com.esprit.dari.entities.Appointment;
+import com.esprit.dari.entities.AdAppointment.Appointment;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

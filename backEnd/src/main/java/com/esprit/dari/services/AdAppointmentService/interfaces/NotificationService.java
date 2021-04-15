@@ -1,9 +1,8 @@
-package com.esprit.dari.services.interfaces;
+package com.esprit.dari.services.AdAppointmentService.interfaces;
 
-import com.esprit.dari.entities.Notification;
-import com.esprit.dari.entities.UserDari;
+import com.esprit.dari.entities.AdAppointment.Notification;
 
-import com.esprit.dari.entities.NotificationType;
+import com.esprit.dari.entities.AdAppointment.NotificationType;
 
 
 import java.util.List;

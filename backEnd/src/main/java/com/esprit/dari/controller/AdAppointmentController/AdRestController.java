@@ -1,10 +1,8 @@
-package com.esprit.dari.controller;
+package com.esprit.dari.controller.AdAppointmentController;
 
-import com.esprit.dari.dao.AdRepository;
-import com.esprit.dari.entities.AdType;
-import com.esprit.dari.services.AdServiceImpl;
-import com.esprit.dari.services.interfaces.AdService;
-import com.esprit.dari.entities.Ad;
+import com.esprit.dari.dao.AdAppointmentRepository.AdRepository;
+import com.esprit.dari.services.AdAppointmentService.interfaces.AdService;
+import com.esprit.dari.entities.AdAppointment.Ad;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

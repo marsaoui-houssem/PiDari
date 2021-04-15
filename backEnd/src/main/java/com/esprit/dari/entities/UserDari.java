@@ -4,22 +4,22 @@ package com.esprit.dari.entities;
 
 
 //import com.esprit.dari.entities.creditentitie.DemandeCredit;
+import com.esprit.dari.entities.AdAppointment.Ad;
+import com.esprit.dari.entities.AdAppointment.AdFav;
+import com.esprit.dari.entities.AdAppointment.Appointment;
+import com.esprit.dari.entities.AdAppointment.Notification;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity

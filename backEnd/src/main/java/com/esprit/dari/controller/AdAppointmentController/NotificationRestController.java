@@ -1,10 +1,10 @@
-package com.esprit.dari.controller;
+package com.esprit.dari.controller.AdAppointmentController;
 
-import com.esprit.dari.entities.NotificationType;
-import com.esprit.dari.services.interfaces.AppointmentService;
-import com.esprit.dari.entities.Notification;
-import com.esprit.dari.services.interfaces.NotificationService;
-import com.esprit.dari.dao.NotificationRepository;
+import com.esprit.dari.entities.AdAppointment.NotificationType;
+import com.esprit.dari.services.AdAppointmentService.interfaces.AppointmentService;
+import com.esprit.dari.entities.AdAppointment.Notification;
+import com.esprit.dari.services.AdAppointmentService.interfaces.NotificationService;
+import com.esprit.dari.dao.AdAppointmentRepository.NotificationRepository;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

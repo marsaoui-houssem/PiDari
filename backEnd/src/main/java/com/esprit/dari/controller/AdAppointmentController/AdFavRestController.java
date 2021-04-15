@@ -1,12 +1,9 @@
-package com.esprit.dari.controller;
+package com.esprit.dari.controller.AdAppointmentController;
 
-import com.esprit.dari.dao.AdFavRepository;
-import com.esprit.dari.dao.AdRepository;
-import com.esprit.dari.entities.Ad;
-import com.esprit.dari.entities.AdFav;
+import com.esprit.dari.dao.AdAppointmentRepository.AdFavRepository;
+import com.esprit.dari.entities.AdAppointment.AdFav;
 //import com.esprit.dari.services.interfaces.AdFavService;
-import com.esprit.dari.services.interfaces.AdFavService;
-import com.esprit.dari.services.interfaces.AdService;
+import com.esprit.dari.services.AdAppointmentService.interfaces.AdFavService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

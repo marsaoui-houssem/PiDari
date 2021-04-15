@@ -1,11 +1,9 @@
-package com.esprit.dari.entities;
+package com.esprit.dari.entities.AdAppointment;
 
+import com.esprit.dari.entities.UserDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonSetter;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,7 +14,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Time;
 import java.util.Date;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity

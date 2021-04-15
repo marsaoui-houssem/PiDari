@@ -1,21 +1,17 @@
-package com.esprit.dari.services;
+package com.esprit.dari.services.AdAppointmentService;
 
-import com.esprit.dari.dao.AdRepository;
-import com.esprit.dari.dao.AppointmentRepository;
+import com.esprit.dari.dao.AdAppointmentRepository.AdRepository;
+import com.esprit.dari.dao.AdAppointmentRepository.AppointmentRepository;
 import com.esprit.dari.dao.UserDariRepository;
-import com.esprit.dari.entities.Appointment;
-import com.esprit.dari.entities.Notification;
+import com.esprit.dari.entities.AdAppointment.Appointment;
 
-import com.esprit.dari.entities.NotificationType;
-import com.esprit.dari.services.interfaces.NotificationService;
+import com.esprit.dari.services.AdAppointmentService.interfaces.NotificationService;
 
 
 
-import com.esprit.dari.services.interfaces.AppointmentService;
+import com.esprit.dari.services.AdAppointmentService.interfaces.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 //import tn.dari.spring.service.interfaces.PriceHistoryService;
 
 @Service

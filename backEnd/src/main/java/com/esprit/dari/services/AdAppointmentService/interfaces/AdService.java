@@ -1,8 +1,8 @@
-package com.esprit.dari.services.interfaces;
+package com.esprit.dari.services.AdAppointmentService.interfaces;
 
 import java.util.List;
-import com.esprit.dari.entities.Ad;
-import com.esprit.dari.entities.AdType;
+import com.esprit.dari.entities.AdAppointment.Ad;
+import com.esprit.dari.entities.AdAppointment.AdType;
 
 
 public interface AdService {

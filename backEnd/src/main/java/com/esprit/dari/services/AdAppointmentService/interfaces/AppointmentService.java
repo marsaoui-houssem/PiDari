@@ -1,10 +1,6 @@
-package com.esprit.dari.services.interfaces;
+package com.esprit.dari.services.AdAppointmentService.interfaces;
 
-import com.esprit.dari.entities.Appointment;
-
-
-
-import java.util.List;
+import com.esprit.dari.entities.AdAppointment.Appointment;
 
 
 public interface AppointmentService {

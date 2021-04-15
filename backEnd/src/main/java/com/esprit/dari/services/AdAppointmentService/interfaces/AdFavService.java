@@ -1,8 +1,4 @@
-package com.esprit.dari.services.interfaces;
-
-import com.esprit.dari.entities.AdFav;
-
-import java.util.List;
+package com.esprit.dari.services.AdAppointmentService.interfaces;
 
 
 public interface AdFavService {
