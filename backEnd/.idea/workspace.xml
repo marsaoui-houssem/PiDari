@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/creditrepository/BankRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/creditrepository/DemandeCrRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/userrepository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/userrepository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Bank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Banque.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/DemandeCredit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/creditentitie/Profession.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/userentity/UserDari.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/userentity/UserDari.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/CallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/CallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/CallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/CallServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="@Aspect" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="houssem" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\goldzeo\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pFUEZ4CB95H3LozPX7X7QV2Sxq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.esprit.dari.services.user.impl" />
+      <recent name="com.esprit.dari.services.userservice" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\controller\usercontroller\registration" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\creditentitie" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\dao\creditrepository" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\userentity" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.esprit.dari.services.user.impl" />
+      <recent name="com.esprit.dari.services.userservice" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+      <command value="mvn clean install --update-snapshots" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="DariApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.dari.DariApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="" />
+      <created>1614778228744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614778228744</updated>
+      <workItem from="1614778230366" duration="3670000" />
+      <workItem from="1614786188199" duration="9955000" />
+      <workItem from="1614805436496" duration="16386000" />
+      <workItem from="1614853624296" duration="5372000" />
+      <workItem from="1615102915627" duration="34127000" />
+      <workItem from="1615359497507" duration="15499000" />
+      <workItem from="1615451883658" duration="15278000" />
+      <workItem from="1615580886303" duration="261000" />
+      <workItem from="1616786749802" duration="23878000" />
+      <workItem from="1616920473674" duration="8234000" />
+      <workItem from="1617039096646" duration="7676000" />
+      <workItem from="1617095893246" duration="48185000" />
+
+      <workItem from="1618474397144" duration="3294000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="694" y="278" key="#Assign_Data_Sources" timestamp="1616787764074">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="694" y="278" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1616787764074" />
+    <state x="163" y="0" key="#Project_Structure" timestamp="1616876491220">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1616876491220" />
+    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617124480248">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617124480248" />
+
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1618479996335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1618479996335" />
+
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1617273298898">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1617273298898" />
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1617231175666">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1617231175666" />
+    <state x="280" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1615327007153">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="280" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1615327007153" />
+    <state x="453" y="232" width="461" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1617285832100">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="453" y="232" width="461" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1617285832100" />
+    <state x="429" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1616869866588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="429" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1616869866588" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616790613445">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616790613445" />
+    <state x="438" y="66" key="#xdebugger.evaluate" timestamp="1616879163442">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="66" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1616879163442" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1618476379095">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618476379095" />
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1618479950146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.center" timestamp="1618479950146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.left" timestamp="1618479950146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.right" timestamp="1618479950146">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+
+    <state width="1323" height="190" key="GridCell.Tab.1.bottom" timestamp="1617305081527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617305081527" />
+    <state width="1323" height="190" key="GridCell.Tab.1.center" timestamp="1617305081527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1617305081527" />
+    <state width="1323" height="190" key="GridCell.Tab.1.left" timestamp="1617305081527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1617305081527" />
+    <state width="1323" height="190" key="GridCell.Tab.1.right" timestamp="1617305081527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="190" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1617305081527" />
+    <state width="1323" height="196" key="GridCell.Tab.2.bottom" timestamp="1617305081434">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617305081434" />
+    <state width="1323" height="196" key="GridCell.Tab.2.center" timestamp="1617305081434">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1617305081434" />
+    <state width="1323" height="196" key="GridCell.Tab.2.left" timestamp="1617305081434">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1617305081434" />
+    <state width="1323" height="196" key="GridCell.Tab.2.right" timestamp="1617305081434">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="196" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1617305081434" />
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog" timestamp="1615454121180">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="213" y="18" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1615454121180" />
+    <state x="445" y="66" key="RollbackChangesDialog" timestamp="1616878169249">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616878169249" />
+    <state x="183" y="10" key="SettingsEditor" timestamp="1614787500923">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="183" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614787500923" />
+    <state width="498" height="468" key="SwitcherDM" timestamp="1614821185575">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="468" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1614821185575" />
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1614790972314">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1614790972314" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1616880820794">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1616880820794" />
+    <state x="389" y="0" width="587" height="728" key="find.popup" timestamp="1616927730172">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="0" width="587" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1616927730172" />
+    <state x="479" y="112" key="refactoring.ChangeSignatureDialog" timestamp="1616886679382">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="112" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1616886679382" />
+    <state x="338" y="165" width="672" height="677" key="run.anything.popup" timestamp="1618474804069">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="338" y="165" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1618474804069" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1617231807243">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1617231807243" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dari$DariApplication.ic" NAME="DariApplication Coverage Results" MODIFIED="1617263051359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
