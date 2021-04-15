@@ -23,6 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/user/impl/AccountServiceImpl.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/usercontroller/TasksRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/creditrepository/BankRepository.java" beforeDir="false" />
@@ -108,6 +112,17 @@
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\userentity" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\services" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.esprit.dari.services.user.impl" />
+      <recent name="com.esprit.dari.services.userservice" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -146,7 +161,8 @@
       <workItem from="1616920473674" duration="8234000" />
       <workItem from="1617039096646" duration="7676000" />
       <workItem from="1617095893246" duration="48185000" />
-      <workItem from="1618474397144" duration="2347000" />
+
+      <workItem from="1618474397144" duration="3294000" />
     </task>
     <servers />
   </component>
@@ -178,6 +194,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="433" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1617124480248" />
+
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1618479996335">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1618479996335" />
+
     <state x="940" y="95" key="#com.intellij.ide.util.MemberChooser" timestamp="1617273298898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -210,22 +232,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618476379095" />
-    <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1618474804234">
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom" timestamp="1618479950146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618474804234" />
-    <state width="1323" height="190" key="GridCell.Tab.0.center" timestamp="1618474804234">
+    <state width="1323" height="190" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.center" timestamp="1618479950146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618474804234" />
-    <state width="1323" height="190" key="GridCell.Tab.0.left" timestamp="1618474804234">
+    <state width="1323" height="190" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.left" timestamp="1618479950146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618474804234" />
-    <state width="1323" height="190" key="GridCell.Tab.0.right" timestamp="1618474804234">
+    <state width="1323" height="190" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+    <state width="1323" height="190" key="GridCell.Tab.0.right" timestamp="1618479950146">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618474804234" />
+    <state width="1323" height="190" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618479950146" />
+
     <state width="1323" height="190" key="GridCell.Tab.1.bottom" timestamp="1617305081527">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
