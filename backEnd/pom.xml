@@ -91,6 +91,7 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
+
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
@@ -117,6 +118,7 @@
             <artifactId>twilio</artifactId>
             <version>8.5.0</version>
         </dependency>
+
     </dependencies>
 
 
