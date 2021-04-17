@@ -1,0 +1,34 @@
+package com.eprit.dari.controller;
+
+import com.eprit.dari.entities.Furniture;
+import com.eprit.dari.entities.GiftPoints;
+import com.eprit.dari.services.IGiftPointsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+public class GiftPointsRestController {
+
+    @Autowired
+    IGiftPointsService iGiftPointsService;
+
+    @PostMapping("/giftPointsTransfer/{userDariId}/{points}")
+    @ResponseBody
+    public Long giftPointsTransfer(@PathVariable("userDariId") Long userDariId, @PathVariable("points") int points){
+        return iGiftPointsService.transferGiftPoints(userDariId, points);
+    }
+
+    @DeleteMapping("/deleteGiftPoints/{giftPointsId}")
+    @ResponseBody
+    public void deleteGiftPoints(@PathVariable("giftPointsId") Long giftPointsId){
+        iGiftPointsService.deleteGiftPointsById(giftPointsId);
+    }
+
+    @GetMapping(value = "/getAllCGiftPoints")
+    @ResponseBody
+    public List<GiftPoints> findGiftPoints(){
+        return iGiftPointsService.getAllGiftPoints();
+    }
+}

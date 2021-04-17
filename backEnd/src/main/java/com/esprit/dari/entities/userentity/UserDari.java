@@ -1,6 +1,11 @@
 package com.esprit.dari.entities.userentity;
 
 
+
+import com.esprit.dari.entities.furnituresEntities.Basket;
+import com.esprit.dari.entities.furnituresEntities.Command;
+import com.esprit.dari.entities.furnituresEntities.GiftPoints;
+
 import com.esprit.dari.entities.userentity.RoleDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -9,6 +14,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+
+import java.util.List;
+
 
 @Entity
 public class UserDari implements Serializable {
@@ -27,8 +35,22 @@ public class UserDari implements Serializable {
     private boolean activated;
     private String imageUrl;
 
+    private String ville;
+
+
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<RoleDari> roleDaris =new ArrayList<>();
+
+
+    @JsonIgnore
+    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    private List<GiftPoints> giftPoints = new ArrayList<>();
+    @JsonIgnore
+    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    private List<Basket> baskets = new ArrayList<>();
+    @JsonIgnore
+    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    private List<Command> commands = new ArrayList<>();
 
 
     public UserDari() {
@@ -62,6 +84,40 @@ public class UserDari implements Serializable {
         this.activated =activated;
         this.roleDaris = roleDaris;
     }
+
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public List<GiftPoints> getGiftPoints() {
+        return giftPoints;
+    }
+
+    public void setGiftPoints(List<GiftPoints> giftPoints) {
+        this.giftPoints = giftPoints;
+    }
+
+    public List<Basket> getBaskets() {
+        return baskets;
+    }
+
+    public void setBaskets(List<Basket> baskets) {
+        this.baskets = baskets;
+    }
+
+    public List<Command> getCommands() {
+        return commands;
+    }
+
+    public void setCommands(List<Command> commands) {
+        this.commands = commands;
+    }
+
 
     public Long getUserId() {
         return userId;
