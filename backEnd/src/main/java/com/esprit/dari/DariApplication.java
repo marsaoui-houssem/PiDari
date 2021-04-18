@@ -30,7 +30,9 @@ import java.util.stream.Stream;
 
 @SpringBootApplication (exclude = { SecurityAutoConfiguration.class })
 @EnableAspectJAutoProxy
-public class DariApplication  {    // //implements CommandLineRunner
+
+public class DariApplication implements CommandLineRunner {
+
     @Autowired
     private AccountService accountService;
     @Autowired
@@ -42,6 +44,7 @@ public class DariApplication  {    // //implements CommandLineRunner
     public static void main(String[] args) {
         SpringApplication.run(DariApplication.class, args);
 
+
     }
 
     @Bean
@@ -51,17 +54,18 @@ public class DariApplication  {    // //implements CommandLineRunner
         return new BCryptPasswordEncoder();
     }
 
-   // @Override
-   // public void run(String... args) throws Exception {
-   //   accountService.saveUser(new UserDari(null,"admin","admin","houssemeddine.marsaoui@esprit.tn",true,null));
-   //   accountService.saveUser(new UserDari(null,"user","user",true,null));
-   //     accountService.saveRole(new RoleDari(null,"ADMIN"));
-   //     accountService.saveRole(new RoleDari(null,"USER"));
-    //    accountService.saveRole(new RoleDari(null,"PASSWORD"));
-   //     accountService.addRoleToUser("admin","ADMIN");
-    //    accountService.addRoleToUser("admin","USER");
-    //    accountService.addRoleToUser("User","USER");
+    @Override
+    public void run(String... args) throws Exception {
+      accountService.saveUser(new UserDari(null,"admin","admin","houssemeddine.marsaoui@esprit.tn",true,null));
+      accountService.saveUser(new UserDari(null,"user","user",true,null));
+        accountService.saveRole(new RoleDari(null,"ADMIN"));
+        accountService.saveRole(new RoleDari(null,"USER"));
+        accountService.saveRole(new RoleDari(null,"PASSWORD"));
+        accountService.addRoleToUser("admin","ADMIN");
+        accountService.addRoleToUser("admin","USER");
+        accountService.addRoleToUser("User","USER");
 
-  //  }
+    }
+
 
 }
