@@ -30,7 +30,9 @@ import java.util.stream.Stream;
 
 @SpringBootApplication (exclude = { SecurityAutoConfiguration.class })
 @EnableAspectJAutoProxy
+
 public class DariApplication implements CommandLineRunner {
+
     @Autowired
     private AccountService accountService;
     @Autowired
@@ -41,6 +43,7 @@ public class DariApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(DariApplication.class, args);
+
 
     }
 
@@ -63,5 +66,6 @@ public class DariApplication implements CommandLineRunner {
         accountService.addRoleToUser("User","USER");
 
     }
+
 
 }

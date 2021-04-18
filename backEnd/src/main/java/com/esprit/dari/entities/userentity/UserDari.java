@@ -2,11 +2,20 @@ package com.esprit.dari.entities.userentity;
 
 
 
+import com.esprit.dari.entities.AdAppointment.Ad;
+import com.esprit.dari.entities.AdAppointment.AdFav;
+import com.esprit.dari.entities.AdAppointment.Appointment;
+import com.esprit.dari.entities.AdAppointment.Notification;
+import com.esprit.dari.entities.abonnement.Abonnement;
+
+
+
 import com.esprit.dari.entities.furnituresEntities.Basket;
 import com.esprit.dari.entities.furnituresEntities.Command;
 import com.esprit.dari.entities.furnituresEntities.GiftPoints;
 
 import com.esprit.dari.entities.userentity.RoleDari;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
@@ -16,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -35,6 +45,41 @@ public class UserDari implements Serializable {
     private boolean activated;
     private String imageUrl;
 
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<RoleDari> roleDaris =new ArrayList<>();
+
+     
+    @OneToMany(cascade = CascadeType.REMOVE , mappedBy = "userDariAbon")
+    private List<Abonnement> abonnements = new ArrayList<>();
+
+
+
+
+    
+
+
+
+
+    @JsonIgnore
+    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    private Set<Ad> ads;
+
+    @JsonIgnore
+    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    private Set<AdFav> adFav;
+
+    @JsonIgnore
+    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    private Set<Appointment> app;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonIgnore
+    private Set<Notification> notifications;
+
+
+
+
     private String ville;
 
 
@@ -51,6 +96,7 @@ public class UserDari implements Serializable {
     @JsonIgnore
     @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Command> commands = new ArrayList<>();
+
 
 
     public UserDari() {
@@ -86,6 +132,7 @@ public class UserDari implements Serializable {
     }
 
 
+
     public String getVille() {
         return ville;
     }
@@ -117,6 +164,7 @@ public class UserDari implements Serializable {
     public void setCommands(List<Command> commands) {
         this.commands = commands;
     }
+
 
 
     public Long getUserId() {
@@ -192,11 +240,54 @@ public class UserDari implements Serializable {
         return PhoneNumber;
     }
 
+
     public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
     public void setRoleDaris(Collection<RoleDari> roleDaris) {
         this.roleDaris = roleDaris;
+    }
+
+
+
+    public List<Abonnement> getAbonnements() {
+        return abonnements;
+    }
+
+    public void setAbonnements(List<Abonnement> abonnements) {
+        this.abonnements = abonnements;
+    }
+
+    public Set<Ad> getAds() {
+        return ads;
+    }
+
+    public void setAds(Set<Ad> ads) {
+        this.ads = ads;
+    }
+
+    public Set<AdFav> getAdFav() {
+        return adFav;
+    }
+
+    public void setAdFav(Set<AdFav> adFav) {
+        this.adFav = adFav;
+    }
+
+    public Set<Appointment> getApp() {
+        return app;
+    }
+
+    public void setApp(Set<Appointment> app) {
+        this.app = app;
+    }
+
+    public Set<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(Set<Notification> notifications) {
+        this.notifications = notifications;
     }
 
 }
