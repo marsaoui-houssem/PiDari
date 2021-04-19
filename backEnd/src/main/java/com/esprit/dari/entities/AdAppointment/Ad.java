@@ -29,6 +29,8 @@ public class Ad implements Serializable {
 
     private String region;
 
+    private String image;
+
     private double surface;
 
     private int nbrpieces;
@@ -77,6 +79,14 @@ public class Ad implements Serializable {
     public void setIdAd(Long idAd) {
 
         this.idAd = idAd;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getName() {
@@ -182,7 +192,7 @@ public class Ad implements Serializable {
         Fav = fav;
     }
 
-    public Ad(Long idAd, String name, double price, String region, double surface, int nbrpieces, int rooms, boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user, Set<Appointment> app) {
+    public Ad(Long idAd, String name, double price, String region, double surface, int nbrpieces, int rooms, boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user, Set<Appointment> app,String image) {
         this.idAd = idAd;
         this.name = name;
         this.price = price;
@@ -196,10 +206,11 @@ public class Ad implements Serializable {
         this.type = type;
         this.user = user;
         this.app = app;
+        this.image=image;
     }
 
     public Ad(String name, double price, String region, double surface, int nbrpieces, int rooms,
-              boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user) {
+              boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user,String image) {
         super();
 
         this.name = name;
@@ -213,6 +224,8 @@ public class Ad implements Serializable {
         this.etat = etat;
         this.type = type;
         this.user = user;
+        this.image=image;
+
 
     }
 
