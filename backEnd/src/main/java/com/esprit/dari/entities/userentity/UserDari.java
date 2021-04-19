@@ -44,21 +44,9 @@ public class UserDari implements Serializable {
     private String email;
     private boolean activated;
     private String imageUrl;
-
-
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<RoleDari> roleDaris =new ArrayList<>();
-
      
     @OneToMany(cascade = CascadeType.REMOVE , mappedBy = "userDariAbon")
     private List<Abonnement> abonnements = new ArrayList<>();
-
-
-
-
-    
-
-
 
 
     @JsonIgnore
