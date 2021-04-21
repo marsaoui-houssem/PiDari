@@ -1,0 +1,13 @@
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Model.dll
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Model.pdb
+C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.dll
+C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.pdb
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Model.dll.config
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
+C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
