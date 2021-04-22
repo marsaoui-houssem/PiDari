@@ -61,6 +61,7 @@ public class IControllerAssurenceImpl {
         return assuServ.PrixAssurenceMultiLoyerImp(idAssu,idAd);
     }
     public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu ,  int idAd){
+
         assuServ.mettreAjourPrixAssurenceMultiLoyerImp(idAssu , idAd);
     }
 

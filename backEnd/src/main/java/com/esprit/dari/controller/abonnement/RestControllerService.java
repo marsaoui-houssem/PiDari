@@ -62,6 +62,7 @@ public class RestControllerService {
     @GetMapping(value="/prixServiceMenegement/{idServ}/{idAd}")
     @ResponseBody
     public float prixServiceMenagement (@PathVariable("idServ")  int idServ  ,@PathVariable("idAd") int idAd){
+
         return serserv.prixServiceMenagement(idServ, idAd);
     }
 
@@ -70,6 +71,7 @@ public class RestControllerService {
     @PutMapping(value = "mettreAjourPrixService/{idServ}/{idAd}")
     @ResponseBody
     public void mettreAjourPrixService(@PathVariable("idServ") int idServ ,@PathVariable("idAd") int idAd ){
+
         serserv.mettreAjourPrixService(idServ, idAd);
     }
 

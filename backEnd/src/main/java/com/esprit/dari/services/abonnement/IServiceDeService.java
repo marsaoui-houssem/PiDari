@@ -13,4 +13,5 @@ public interface IServiceDeService {
     public void affecteServiceAabonn ( int idServ  , int idAbon );
     public float prixServiceMenagement (int idServ  , int idAd    );
     public void mettreAjourPrixService( int idServ , int idAd );
+
 }

@@ -62,6 +62,7 @@ public class IControllerServiceImpl   {
     }
 
     public void mettreAjourPrixService( int idServ , int idAd ){
+
          serserv.mettreAjourPrixService(idServ,idAd);
     }
 }

@@ -13,4 +13,5 @@ public interface UserDariRepository extends JpaRepository<UserDari,Long> {
 
 
 
+
 }

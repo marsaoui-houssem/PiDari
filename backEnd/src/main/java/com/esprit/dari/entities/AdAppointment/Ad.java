@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import com.esprit.dari.entities.LouerAchat.*;
+
 import com.esprit.dari.entities.userentity.UserDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -36,6 +37,7 @@ public class Ad implements Serializable {
 
     private String Delegation;
 
+
     private double surface;
 
     private int nbrpieces;
@@ -44,11 +46,13 @@ public class Ad implements Serializable {
 
     private String image;
 
+
     private boolean piscine;
 
     private String description;
 
     private int taux_reduction ;
+
 
     @Enumerated(EnumType.STRING)
     private Ad_Etat etat;
@@ -136,6 +140,7 @@ public class Ad implements Serializable {
 
     public void setDelegation(String delegation) {
         Delegation = delegation;
+
     }
 
     public double getSurface() {
@@ -186,6 +191,7 @@ public class Ad implements Serializable {
         this.taux_reduction = taux_reduction;
     }
 
+
     public Ad_Etat getEtat() {
         return etat;
     }
@@ -233,6 +239,7 @@ public class Ad implements Serializable {
     public void setFeedbacks(List<Feedback> feedbacks) {
         this.feedbacks = feedbacks;
     }
+
 
     public Set<Appointment> getApp() {
         return app;
@@ -285,5 +292,6 @@ public class Ad implements Serializable {
 
     public Ad() {
 super();
+
     }
 }

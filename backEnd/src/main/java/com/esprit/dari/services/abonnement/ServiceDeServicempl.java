@@ -85,6 +85,7 @@ public class ServiceDeServicempl  implements  IServiceDeService {
 
      @Override
      public float prixServiceMenagement (int idServ  , int idAd     ){
+     
         float prix = 0 ;
 
         OffreService service = serRep.findById(idServ).orElse(null);
@@ -114,6 +115,7 @@ public class ServiceDeServicempl  implements  IServiceDeService {
 
      @Override
      public void mettreAjourPrixService( int idServ , int idAd ){
+
        float  prix = prixServiceMenagement(idServ, idAd);
          serRep.mettreAjourPrixService(idServ , prix );
      }

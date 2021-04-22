@@ -9,6 +9,7 @@ import com.esprit.dari.entities.AdAppointment.Notification;
 import com.esprit.dari.entities.LouerAchat.Feedback;
 import com.esprit.dari.entities.LouerAchat.Sell;
 import com.esprit.dari.entities.LouerAchat.rent;
+
 import com.esprit.dari.entities.abonnement.Abonnement;
 
 
@@ -25,6 +26,11 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -36,6 +42,7 @@ public class UserDari implements Serializable {
     @Column(unique = true)
     private String username;
     // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+
     private String password;
     private String firstName;
     private String lastName;
@@ -62,6 +69,7 @@ public class UserDari implements Serializable {
 
 
     @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "userDariAbon")
+
     private List<Abonnement> abonnements = new ArrayList<>();
 
 
@@ -75,11 +83,13 @@ public class UserDari implements Serializable {
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
+
     private Set<Appointment> app;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     @JsonIgnore
     private Set<Notification> notifications;
+
 
 
     private String ville;
@@ -97,6 +107,7 @@ public class UserDari implements Serializable {
     private List<Basket> baskets = new ArrayList<>();
     @JsonIgnore
     @OneToMany(mappedBy = "users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+
     private List<Command> commands = new ArrayList<>();
 
 
@@ -118,6 +129,7 @@ public class UserDari implements Serializable {
     }
 
     public UserDari(Long userId, String username, String password, boolean activated, Collection<RoleDari> roleDaris) {
+
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -130,8 +142,10 @@ public class UserDari implements Serializable {
         this.password = password;
         this.email = email;
         this.activated = activated;
+
         this.roleDaris = roleDaris;
     }
+
 
 
     public String getVille() {
@@ -165,6 +179,7 @@ public class UserDari implements Serializable {
     public void setCommands(List<Command> commands) {
         this.commands = commands;
     }
+
 
 
     public Long getUserId() {
@@ -250,6 +265,7 @@ public class UserDari implements Serializable {
     public void setRoleDaris(Collection<RoleDari> roleDaris) {
         this.roleDaris = roleDaris;
     }
+
 
 
     public List<Abonnement> getAbonnements() {
@@ -342,3 +358,4 @@ public class UserDari implements Serializable {
 
 
 }
+

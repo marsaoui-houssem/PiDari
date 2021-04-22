@@ -4,6 +4,7 @@ package com.esprit.dari.dao.AdAppointmentRepository;
 import com.esprit.dari.entities.AdAppointment.Ad;
 import com.esprit.dari.entities.AdAppointment.AdType;
 import com.esprit.dari.entities.AdAppointment.Ad_Etat;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -26,6 +27,7 @@ public interface AdRepository extends JpaRepository<Ad,Integer> {
     public List<Ad> findByRoomsLessThan(int rooms);
     public List<Ad> findByRegion(String region);
     public List<Ad> findByType(AdType type);
+
    // public List<Ad> findByNumberOfFloors(int etage);
   //  public List<Ad> findByNumberOfFloorsGreaterThan(int etage);
    // public List<Ad> findByNumberOfFloorsLessThan(int etage);
@@ -44,6 +46,7 @@ public interface AdRepository extends JpaRepository<Ad,Integer> {
 
     @Query("SELECT A FROM Ad A WHERE A.name LIKE %?1%")
     List<Ad> findByTextContainingIgnoreCase(String Text);
+
 
 
     @Query(value ="select * from ad ad , user_dari userr  where userr.user_id=:userId and userr.user_id = ad.user_dari_user_id",nativeQuery = true)

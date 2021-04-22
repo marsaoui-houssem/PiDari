@@ -17,4 +17,5 @@ public interface IAssurenceService   {
     public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu ,  int idAd);
 
 
+
 }

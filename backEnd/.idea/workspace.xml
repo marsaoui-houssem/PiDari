@@ -22,7 +22,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="" />
+
+    <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/CreditController/RestControlBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/CreditController/RestControlBank.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,12 +74,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+
+
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -82,22 +98,37 @@
       <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\controller\LouerAchat" />
       <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\services\LouerAchat" />
       <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\dao\LouerAchat" />
+      <recent name="C:\Users\goldzeo\Desktop\correction houssem\PiDari\backEnd" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\controller\usercontroller\registration" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\creditentitie" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\dao\creditrepository" />
+      <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\userentity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.esprit.dari.services.user.impl" />
       <recent name="com.esprit.dari.services.userservice" />
       <recent name="com.esprit.dari.dao.userrepository" />
       <recent name="com.esprit.dari.controller" />
+
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install --update-snapshots" />
+
+      <command value="mvn clean" />
+
       <command value="mvn install" />
       <command value="mvn clean install --update-snapshots" />
-      <command value="mvn install" />
-      <command value="mvn clean" />
+
       <command value="mvn clean install" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunManager">
@@ -134,6 +165,7 @@
       <workItem from="1618495181573" duration="327000" />
       <workItem from="1618873302582" duration="13439000" />
       <workItem from="1618955776108" duration="1849000" />
+
     </task>
     <servers />
   </component>
@@ -152,6 +184,7 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dari$DariApplication.ic" NAME="DariApplication Coverage Results" MODIFIED="1617263051359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
