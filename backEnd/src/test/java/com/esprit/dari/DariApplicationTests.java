@@ -1,9 +1,13 @@
 package com.esprit.dari;
-
+/*
 import com.esprit.dari.dao.abonnement.IAbonnementRepository;
 import com.esprit.dari.entities.abonnement.*;
-import com.esprit.dari.services.abonnement.*;
+
+import com.esprit.dari.services.abonnement.IAbonnementService;
+import com.esprit.dari.services.abonnement.IAssurenceService;
+import com.esprit.dari.services.abonnement.IServiceDeService;
 import org.junit.jupiter.api.Test;
+*/
 
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +24,8 @@ import java.util.Date;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class DariApplicationTests {
+
+/*
 
     @Autowired
     IAbonnementService abonserv;
@@ -80,6 +86,77 @@ public class DariApplicationTests {
          // servserv.ajoutService(serv2);
          // servserv.ajoutService(serv3);
         // servserv.ajoutService(serv4);
+
+
+
+
+
+        // assuserv.affecteAssurAbonn(2,3);
+
+        // List<Assurence> listas = new ArrayList<Assurence>();
+        //    listas = abonserv.getAllAssubyAbon(1);
+
+        //   for(Assurence s : listas ){
+        //   System.out.println(s);
+        //  }
+
+
+        //UserDari user = new  UserDari( "sarhan", "123456789");
+        //userserv.ajoutUser(user);
+        // UserDari user1 = new  UserDari( "chakib ben salah ", "chakib");
+        // userserv.ajoutUser(user1);
+
+        // System.out.println (abonserv.prixAbonRemise(3));
+///////////////////////////////////
+        //  float somme = 0 ;
+        // Abonnement abon = abonRep.findById(3).orElse(null);
+        ///  List<OffreService> services = new ArrayList<>();
+        //        services = abon.getServices();
+
+        //     List<Float> prixs = new ArrayList<Float>();
+
+        //  for (OffreService of : services ){
+        //     prixs.add(of.getPrixServ());
+        //      }
+
+        // System.out.println(prixs);
+////////////////////////////////////////////////
+
+        //System.out.println( abonserv.sommeServ(3));
+        // System.out.println(abonserv.prixAbonRemise(1));
+
+
+        //  Ad  ad = new Ad("appartement a vendre  ", 900000 , 0, "carthage", 800, 8, 9, true, "appartement ", Ad_Etat.For_Sell, AdType.appartement);
+        //  adserv.ajouteAd(ad);
+
+        // Ad ad1 = new Ad(" a vendre villa a sokra ", 600000, 0, "sokra", 500, 9  , 5, true, "villa a sokra", Ad_Etat.For_Sell, AdType.Villa);
+        //  adserv.ajouteAd(ad1);
+        // Ad ad2 = new Ad(" appartement s+3  ",0 , 450000, "la goulette", 300, 6  , 3, false, "appartement a la goulette", Ad_Etat.For_Rent, AdType.appartement);
+        // adserv.ajouteAd(ad2);
+        // Ad ad3 = new Ad(" appartement a vendre a bardo  ",500000 , 0, "bardo", 550, 6  , 4, false, "a vendre appartement ", Ad_Etat.For_Sell, AdType.appartement);
+        // adserv.ajouteAd(ad3);
+
+
+        //adserv.affecteAdAUser(6,3);
+        //adserv.affecteAdAUser(2,2);
+        // adserv.affecteAdAUser(4,2);
+        //System.out.println(abonserv.conseilleAchatAbon(1));
+
+
+
+
+        //userserv.affecteruserAabon(3,1);
+
+        //abonserv.alerFintAbonnement();
+        //abonserv.CaracteristiqueAbonne(1 );
+
+        //abonserv.mettreAjourdatefinByAbon(c,1);
+        //System.out.println(abonserv.countAbonserver());
+        // System.out.println(abonserv.meilleurVenteAbon());
+        // assuserv.desaffecterAssurenceDuAbon(3);
+
+}
+*/
 
 
 

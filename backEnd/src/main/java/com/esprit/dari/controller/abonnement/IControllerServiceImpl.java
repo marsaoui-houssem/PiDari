@@ -57,11 +57,12 @@ public class IControllerServiceImpl   {
         this.listService = listService;
     }
 
-    public float prixServiceMenagement (int idServ  , Long idAd    ){
+    public float prixServiceMenagement (int idServ  , int idAd    ){
         return serserv.prixServiceMenagement(idServ , idAd);
     }
 
-    public void mettreAjourPrixService( int idServ , Long idAd ){
+    public void mettreAjourPrixService( int idServ , int idAd ){
+
          serserv.mettreAjourPrixService(idServ,idAd);
     }
 }

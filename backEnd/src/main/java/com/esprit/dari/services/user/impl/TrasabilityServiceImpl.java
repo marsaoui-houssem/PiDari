@@ -3,6 +3,8 @@ package com.esprit.dari.services.user.impl;
 
 import com.esprit.dari.dao.userrepository.TrasabilityRepository;
 import com.esprit.dari.entities.userentity.Trasability;
+import com.esprit.dari.entities.userentity.*;
+
 import com.esprit.dari.services.user.TrasabilityService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;

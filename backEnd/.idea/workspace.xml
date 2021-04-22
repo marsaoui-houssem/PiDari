@@ -22,6 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
 
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -32,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,8 +71,12 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+
 
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
 
@@ -81,7 +87,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.esprit.dari.entities" />
+      <recent name="com.esprit.dari.dao.userrepository" />
+      <recent name="com.esprit.dari.services" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\controller\abonnement" />
+      <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\services\abonnement" />
+      <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\controller\LouerAchat" />
+      <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\services\LouerAchat" />
+      <recent name="C:\Users\Nadhem\Documents\Nadhem\PIDEV 4\GIT\PiDari-master\backEnd\src\main\java\com\esprit\dari\dao\LouerAchat" />
       <recent name="C:\Users\goldzeo\Desktop\correction houssem\PiDari\backEnd" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\controller\usercontroller\registration" />
       <recent name="C:\Users\goldzeo\Desktop\tet\PiDari\backEnd\src\main\java\com\esprit\dari\entities\creditentitie" />
@@ -93,16 +109,19 @@
       <recent name="com.esprit.dari.services.userservice" />
       <recent name="com.esprit.dari.dao.userrepository" />
       <recent name="com.esprit.dari.controller" />
+
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.esprit.dari.entities" />
       <recent name="com.esprit.dari.dao.userrepository" />
       <recent name="com.esprit.dari.services" />
+
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean install --update-snapshots" />
+
       <command value="mvn clean" />
 
       <command value="mvn install" />
@@ -144,6 +163,8 @@
       <workItem from="1618474397144" duration="3294000" />
       <workItem from="1618494532770" duration="377000" />
       <workItem from="1618495181573" duration="327000" />
+      <workItem from="1618873302582" duration="13439000" />
+      <workItem from="1618955776108" duration="1849000" />
 
     </task>
     <servers />

@@ -1,6 +1,9 @@
 package com.esprit.dari.entities.AdAppointment;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import com.esprit.dari.entities.LouerAchat.*;
 
 import com.esprit.dari.entities.userentity.UserDari;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -18,16 +21,22 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Ad implements Serializable {
-    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAd;
+    private int id;
 
     private String name;
 
-    private double price;
+    private float price_per_day;
 
-    private String region;
+    private float price_per_month;
+
+    private float price;
+
+    private String Governorate ;
+
+    private String Delegation;
+
 
     private double surface;
 
@@ -35,11 +44,15 @@ public class Ad implements Serializable {
 
     private int rooms;
 
+    private String image;
+
+
     private boolean piscine;
 
     private String description;
 
-    private double priceRent ;
+    private int taux_reduction ;
+
 
     @Enumerated(EnumType.STRING)
     private Ad_Etat etat;
@@ -51,34 +64,34 @@ public class Ad implements Serializable {
     @ManyToOne
     private UserDari user;
 
+     @OneToMany(mappedBy="ad_sell",cascade={CascadeType.PERSIST,CascadeType.ALL},fetch=FetchType.LAZY)
+    @JsonIgnore
+    private Set<Sell> sells= new HashSet<>();
+
+    @OneToMany(mappedBy="ad_rent",cascade={CascadeType.PERSIST,CascadeType.ALL},fetch=FetchType.LAZY)
+    @JsonIgnore
+    private Set<rent> rents= new HashSet<>();
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="ad")
+    @JsonIgnore
+    private List<Feedback> feedbacks;
+
+
+
     @JsonIgnore
     @OneToMany(cascade =CascadeType.ALL,mappedBy="ads",fetch=FetchType.LAZY)
     private Set<Appointment> app;
 
     @OneToMany(cascade =CascadeType.ALL,mappedBy="ads",fetch=FetchType.LAZY)
     @JsonIgnore
-
     private Set<AdFav> Fav;
 
-
-
-
-
-
-
-// @OneToMany(mappedBy="ad",cascade={CascadeType.PERSIST,CascadeType.REMOVE},fetch=FetchType.EAGER)
-   // private List<Sell> sells= new ArrayList<>();
-
-    //@OneToMany(mappedBy="ad_sell",cascade={CascadeType.PERSIST,CascadeType.REMOVE},fetch=FetchType.EAGER)
-   // private List<rent> rents= new ArrayList<>();
-
-    public Long getIdAd() {
-        return idAd;
+    public int getId() {
+        return id;
     }
 
-    public void setIdAd(Long idAd) {
-
-        this.idAd = idAd;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -89,20 +102,45 @@ public class Ad implements Serializable {
         this.name = name;
     }
 
-    public double getPrice() {
+    public float getPrice_per_day() {
+        return price_per_day;
+    }
+
+    public void setPrice_per_day(float price_per_day) {
+        this.price_per_day = price_per_day;
+    }
+
+    public float getPrice_per_month() {
+        return price_per_month;
+    }
+
+    public void setPrice_per_month(float price_per_month) {
+        this.price_per_month = price_per_month;
+    }
+
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public String getRegion() {
-        return region;
+    public String getGovernorate() {
+        return Governorate;
     }
 
-    public void setRegion(String region) {
-        this.region = region;
+    public void setGovernorate(String governorate) {
+        Governorate = governorate;
+    }
+
+    public String getDelegation() {
+        return Delegation;
+    }
+
+    public void setDelegation(String delegation) {
+        Delegation = delegation;
+
     }
 
     public double getSurface() {
@@ -145,6 +183,15 @@ public class Ad implements Serializable {
         this.description = description;
     }
 
+    public int getTaux_reduction() {
+        return taux_reduction;
+    }
+
+    public void setTaux_reduction(int taux_reduction) {
+        this.taux_reduction = taux_reduction;
+    }
+
+
     public Ad_Etat getEtat() {
         return etat;
     }
@@ -169,6 +216,31 @@ public class Ad implements Serializable {
         this.user = user;
     }
 
+    public Set<Sell> getSells() {
+        return sells;
+    }
+
+    public void setSells(Set<Sell> sells) {
+        this.sells = sells;
+    }
+
+    public Set<rent> getRents() {
+        return rents;
+    }
+
+    public void setRents(Set<rent> rents) {
+        this.rents = rents;
+    }
+
+    public List<Feedback> getFeedbacks() {
+        return feedbacks;
+    }
+
+    public void setFeedbacks(List<Feedback> feedbacks) {
+        this.feedbacks = feedbacks;
+    }
+
+
     public Set<Appointment> getApp() {
         return app;
     }
@@ -176,6 +248,7 @@ public class Ad implements Serializable {
     public void setApp(Set<Appointment> app) {
         this.app = app;
     }
+
     public Set<AdFav> getFav() {
         return Fav;
     }
@@ -184,49 +257,41 @@ public class Ad implements Serializable {
         Fav = fav;
     }
 
-    public Ad(Long idAd, String name, double price, String region, double surface, int nbrpieces, int rooms, boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user, Set<Appointment> app) {
-        this.idAd = idAd;
-        this.name = name;
-        this.price = price;
-        this.region = region;
-        this.surface = surface;
-        this.nbrpieces = nbrpieces;
-        this.rooms = rooms;
-        this.piscine = piscine;
-        this.description = description;
-        this.etat = etat;
-        this.type = type;
-        this.user = user;
-        this.app = app;
+    public String getImage() {
+        return image;
     }
 
-    public Ad(String name, double price, String region, double surface, int nbrpieces, int rooms,
-              boolean piscine, String description, Ad_Etat etat, AdType type, UserDari user) {
-        super();
+    public void setImage(String image) {
+        this.image = image;
+    }
 
+
+    public Ad(String name, float price_per_day, float price_per_month, float price, String governorate, String delegation, double surface, int nbrpieces, int rooms, String image, boolean piscine, String description, int taux_reduction, Ad_Etat etat, AdType type, UserDari user, Set<Sell> sells, Set<rent> rents, List<Feedback> feedbacks, Set<Appointment> app, Set<AdFav> fav) {
         this.name = name;
+        this.price_per_day = price_per_day;
+        this.price_per_month = price_per_month;
         this.price = price;
-        this.region = region;
+        Governorate = governorate;
+        Delegation = delegation;
         this.surface = surface;
         this.nbrpieces = nbrpieces;
         this.rooms = rooms;
+        this.image = image;
         this.piscine = piscine;
         this.description = description;
+        this.taux_reduction = taux_reduction;
         this.etat = etat;
         this.type = type;
         this.user = user;
-
+        this.sells = sells;
+        this.rents = rents;
+        this.feedbacks = feedbacks;
+        this.app = app;
+        Fav = fav;
     }
 
     public Ad() {
-        super();
-    }
+super();
 
-    public double getPriceRent() {
-        return priceRent;
-    }
-
-    public void setPriceRent(double priceRent) {
-        this.priceRent = priceRent;
     }
 }

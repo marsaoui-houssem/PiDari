@@ -92,7 +92,8 @@ public class AssurenceServiceImpl implements IAssurenceService {
 
 
     @Override
-    public float PrixAssurenceMulti (int idAssu , Long idAd   ){
+    public float PrixAssurenceMulti (int idAssu , int idAd   ){
+
 
         float prix = 0 ;
         Assurence assurence = assRep.findById(idAssu).orElse(null);
@@ -120,7 +121,8 @@ public class AssurenceServiceImpl implements IAssurenceService {
         return prix ;
     }
     @Override
-    public void mettreAjourPrixAssurenceMulti (int idAssu , Long idAd  ){
+    public void mettreAjourPrixAssurenceMulti (int idAssu , int  idAd  ){
+
          float prix = PrixAssurenceMulti(idAssu , idAd  );
         assRep.modifprix(idAssu, prix);
     }
@@ -128,13 +130,15 @@ public class AssurenceServiceImpl implements IAssurenceService {
 
 
     @Override
-    public float PrixAssurenceMultiLoyerImp (int idAssu , Long idAd){
+    public float PrixAssurenceMultiLoyerImp (int idAssu , int idAd){
+
 
        float prix = 0 ;
         Assurence assurence = assRep.findById(idAssu).orElse(null);
 
            Ad ad = adRep.findById(idAd).orElse(null);
-              double prixRent = ad.getPriceRent();
+              double prixRent = ad.getPrice_per_month();
+
 
               double prixrentAnnuel = prixRent * 12 ;
 
@@ -148,7 +152,8 @@ public class AssurenceServiceImpl implements IAssurenceService {
       return prix ;
     }
     @Override
-    public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu , Long idAd){
+    public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu , int idAd){
+
         float prix = PrixAssurenceMultiLoyerImp ( idAssu , idAd);
         assRep.modifprix(idAssu, prix);
     }

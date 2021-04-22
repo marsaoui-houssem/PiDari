@@ -6,6 +6,10 @@ import com.esprit.dari.entities.AdAppointment.Ad;
 import com.esprit.dari.entities.AdAppointment.AdFav;
 import com.esprit.dari.entities.AdAppointment.Appointment;
 import com.esprit.dari.entities.AdAppointment.Notification;
+import com.esprit.dari.entities.LouerAchat.Feedback;
+import com.esprit.dari.entities.LouerAchat.Sell;
+import com.esprit.dari.entities.LouerAchat.rent;
+
 import com.esprit.dari.entities.abonnement.Abonnement;
 
 
@@ -21,6 +25,7 @@ import com.fasterxml.jackson.annotation.JsonSetter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -36,7 +41,8 @@ public class UserDari implements Serializable {
 
     @Column(unique = true)
     private String username;
-   // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    // @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+
     private String password;
     private String firstName;
     private String lastName;
@@ -44,21 +50,40 @@ public class UserDari implements Serializable {
     private String email;
     private boolean activated;
     private String imageUrl;
-     
-    @OneToMany(cascade = CascadeType.REMOVE , mappedBy = "userDariAbon")
+    /* Nadheeeeeem */
+    private int feedenabled = 1;
+    private Date debBlocFeed;
+    private Date finBlocFeed;
+
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userr")
+    private List<Feedback> feedbacks;
+
+    @OneToMany(mappedBy = "user_sell", cascade = {CascadeType.PERSIST, CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Set<Sell> sell = new HashSet<>();
+
+    @OneToMany(mappedBy = "user_rent", cascade = {CascadeType.PERSIST, CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Set<rent> rent = new HashSet<>();
+
+    /* OOOOOOOOOOOOOOOOOOOOOO */
+
+
+    @OneToMany(cascade = CascadeType.REMOVE, mappedBy = "userDariAbon")
+
     private List<Abonnement> abonnements = new ArrayList<>();
 
 
     @JsonIgnore
-    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
     private Set<Ad> ads;
 
     @JsonIgnore
-    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
     private Set<AdFav> adFav;
 
     @JsonIgnore
-    @OneToMany(cascade =CascadeType.ALL,mappedBy="user",fetch=FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
+
     private Set<Appointment> app;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
@@ -67,22 +92,22 @@ public class UserDari implements Serializable {
 
 
 
-
     private String ville;
 
 
     @ManyToMany(fetch = FetchType.EAGER)
-    private Collection<RoleDari> roleDaris =new ArrayList<>();
+    private Collection<RoleDari> roleDaris = new ArrayList<>();
 
 
     @JsonIgnore
-    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<GiftPoints> giftPoints = new ArrayList<>();
     @JsonIgnore
-    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<Basket> baskets = new ArrayList<>();
     @JsonIgnore
-    @OneToMany(mappedBy="users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "users", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+
     private List<Command> commands = new ArrayList<>();
 
 
@@ -103,7 +128,8 @@ public class UserDari implements Serializable {
         this.roleDaris = roleDaris;
     }
 
-    public UserDari(Long userId, String username, String password,boolean activated ,Collection<RoleDari> roleDaris) {
+    public UserDari(Long userId, String username, String password, boolean activated, Collection<RoleDari> roleDaris) {
+
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -111,11 +137,12 @@ public class UserDari implements Serializable {
         this.roleDaris = roleDaris;
     }
 
-    public UserDari(Long userId, String username, String password, String email,boolean activated, Collection<RoleDari> roleDaris) {
+    public UserDari(Long userId, String username, String password, String email, boolean activated, Collection<RoleDari> roleDaris) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.activated =activated;
+        this.activated = activated;
+
         this.roleDaris = roleDaris;
     }
 
@@ -171,10 +198,12 @@ public class UserDari implements Serializable {
     public void setUsername(String username) {
         this.username = username;
     }
+
     @JsonIgnore
     public String getPassword() {
         return password;
     }
+
     @JsonSetter
     public void setPassword(String password) {
         this.password = password;
@@ -232,6 +261,7 @@ public class UserDari implements Serializable {
     public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
+
     public void setRoleDaris(Collection<RoleDari> roleDaris) {
         this.roleDaris = roleDaris;
     }
@@ -278,4 +308,54 @@ public class UserDari implements Serializable {
         this.notifications = notifications;
     }
 
+    public int getFeedenabled() {
+        return feedenabled;
+    }
+
+    public void setFeedenabled(int feedenabled) {
+        this.feedenabled = feedenabled;
+    }
+
+    public Date getDebBlocFeed() {
+        return debBlocFeed;
+    }
+
+    public void setDebBlocFeed(Date debBlocFeed) {
+        this.debBlocFeed = debBlocFeed;
+    }
+
+    public Date getFinBlocFeed() {
+        return finBlocFeed;
+    }
+
+    public void setFinBlocFeed(Date finBlocFeed) {
+        this.finBlocFeed = finBlocFeed;
+    }
+
+    public List<Feedback> getFeedbacks() {
+        return feedbacks;
+    }
+
+    public void setFeedbacks(List<Feedback> feedbacks) {
+        this.feedbacks = feedbacks;
+    }
+
+    public Set<Sell> getSell() {
+        return sell;
+    }
+
+    public void setSell(Set<Sell> sell) {
+        this.sell = sell;
+    }
+
+    public Set<rent> getRent() {
+        return rent;
+    }
+
+    public void setRent(Set<rent> rent) {
+        this.rent = rent;
+    }
+
+
 }
+

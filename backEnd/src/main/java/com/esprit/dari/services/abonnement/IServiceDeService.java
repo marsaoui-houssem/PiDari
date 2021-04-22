@@ -11,6 +11,7 @@ public interface IServiceDeService {
     public OffreService getByIdService (int id );
     public void deleteService(int id);
     public void affecteServiceAabonn ( int idServ  , int idAbon );
-    public float prixServiceMenagement (int idServ  , Long idAd    );
-    public void mettreAjourPrixService( int idServ , Long idAd );
+    public float prixServiceMenagement (int idServ  , int idAd    );
+    public void mettreAjourPrixService( int idServ , int idAd );
+
 }

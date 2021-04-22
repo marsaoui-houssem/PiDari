@@ -63,24 +63,28 @@ public class RestControllerAssurence {
     }
      @GetMapping(value="/PrixAssurenceMulti/{idAssu}/{idAd}")
      @ResponseBody
-    public float PrixAssurenceMulti (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd") Long idAd  ){
+    public float PrixAssurenceMulti (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd") int idAd  ){
+
         return assuServ.PrixAssurenceMulti(idAssu, idAd);
     }
 
     @ResponseBody
     @PutMapping(value = "/mettreAjourPrixAssuMulti/{idAssu}/{idAd}")
-    public void mettreAjourPrixAssurenceMulti (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd") Long idAd ){
+    public void mettreAjourPrixAssurenceMulti (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd") int idAd ){
+
         assuServ.mettreAjourPrixAssurenceMulti(idAssu,idAd);
     }
 
     @GetMapping(value="/PrixAssurenceMultiLoyerImp/{idAssu}/{idAd}")
     @ResponseBody
-    public float PrixAssurenceMultiLoyerImp (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd")  Long idAd){
+    public float PrixAssurenceMultiLoyerImp (@PathVariable("idAssu") int idAssu ,@PathVariable("idAd")  int idAd){
+
         return assuServ.PrixAssurenceMultiLoyerImp(idAssu,idAd);   }
 
    @ResponseBody
    @PutMapping(value = "/mettreAjourPrixAssuloyerImp/{idAssu}/{idAd}")
-    public void mettreAjourPrixAssurenceMultiLoyerImp (@PathVariable("idAssu")  int idAssu ,@PathVariable("idAd") Long idAd){
+    public void mettreAjourPrixAssurenceMultiLoyerImp (@PathVariable("idAssu")  int idAssu ,@PathVariable("idAd") int idAd){
+
         assuServ.mettreAjourPrixAssurenceMultiLoyerImp(idAssu,idAd);
     }
 

@@ -49,18 +49,19 @@ public class IControllerAssurenceImpl {
 
     public void desaffecterAssurenceDuAbon( int idAssu ){ assuServ.desaffecterAssurenceDuAbon(idAssu); }
 
-    public float PrixAssurenceMulti (int idAssu , Long idAd ){
+    public float PrixAssurenceMulti (int idAssu , int idAd ){
         return  assuServ.PrixAssurenceMulti(idAssu, idAd);
     }
 
-    public void mettreAjourPrixAssurenceMulti (int idAssu , Long idAd  ){
+    public void mettreAjourPrixAssurenceMulti (int idAssu , int idAd  ){
         assuServ.mettreAjourPrixAssurenceMulti(idAssu, idAd);
     }
 
-    public float PrixAssurenceMultiLoyerImp (int idAssu ,  Long idAd){
+    public float PrixAssurenceMultiLoyerImp (int idAssu ,  int idAd){
         return assuServ.PrixAssurenceMultiLoyerImp(idAssu,idAd);
     }
-    public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu ,  Long idAd){
+    public void mettreAjourPrixAssurenceMultiLoyerImp (int idAssu ,  int idAd){
+
         assuServ.mettreAjourPrixAssurenceMultiLoyerImp(idAssu , idAd);
     }
 
