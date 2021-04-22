@@ -46,7 +46,7 @@ public class AppointmentServiceImpl implements AppointmentService {
     }
 
     @Override
-    public Long AddAppointment(Appointment app, Long userId, Long adId) {
+    public Long AddAppointment(Appointment app, Long userId, int adId) {
 
         app.setAds(estRep.findByidAd(adId));
         app.setUser(UserRep.findByUserId(userId));

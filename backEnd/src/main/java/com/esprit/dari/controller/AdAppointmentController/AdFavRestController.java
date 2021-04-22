@@ -31,7 +31,7 @@ public class AdFavRestController {
     }
 
     @PostMapping("/addFavEstate")
-    public int AddEstate(@RequestParam("idest") Long EstId, @RequestParam("iduser") Long userId){
+    public int AddEstate(@RequestParam("idest") int EstId, @RequestParam("iduser") Long userId){
 
 EstService.AddEstateFav(EstId,userId);
         return 1;
@@ -43,7 +43,7 @@ EstService.AddEstateFav(EstId,userId);
     //}
 
     @PutMapping("/deleteFavEstate")
-    public int Delete(@RequestParam("id") Long adId){
+    public int Delete(@RequestParam("id") long adId){
 
         EstService.DeleteEstateFav(adId);
         return 1000;

@@ -7,9 +7,9 @@ import com.esprit.dari.entities.AdAppointment.AdType;
 
 public interface AdService {
 
-    public void Update(Ad estate,Long estateId);
-    public Long AddEstate(Ad estate,Long userId);
-    public void DeleteEstate(Long id);
+    public void Update(Ad estate,int estateId);
+    public int AddEstate(Ad estate,long userId);
+    public void DeleteEstate(int id);
     public int countEstate();
     public List<Ad> loadAdByEstateType(AdType estateType);
     public List<Ad> loadAdByRegion(String region);

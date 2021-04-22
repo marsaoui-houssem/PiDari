@@ -26,7 +26,7 @@ public class AdFavServiceImpl implements AdFavService {
 
 
     @Override
-    public Long AddEstateFav(Long estateId, Long userId) {
+    public Long AddEstateFav(int estateId, Long userId) {
 
 AdFav f = new AdFav();
         UserDari user = userRep.findById(userId).get();
@@ -48,7 +48,7 @@ AdFav f = new AdFav();
     }
 
     @Override
-    public void DeleteEstateFav(Long id) {
+    public void DeleteEstateFav(long id) {
 
 
             estFavRep.deleteById(id);

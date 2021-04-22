@@ -24,7 +24,7 @@ public class AdServiceImpl implements AdService {
 
 
     @Override
-    public void Update( Ad estate, Long estateId) {
+    public void Update( Ad estate, int estateId) {
 
         Ad ann = estRep.findById(estateId).get();
 
@@ -32,25 +32,25 @@ public class AdServiceImpl implements AdService {
 
         estate.setUser(ann.getUser());
 
-        estate.setIdAd(estateId);
+        estate.setId(estateId);
         estRep.save(estate);
 
     }
 
     @Override
-    public Long AddEstate(Ad estate, Long userId) {
+    public int AddEstate(Ad estate, long userId) {
 
         estate.setUser(userRep.findByUserId(userId));
 
         estRep.save(estate);
 
 
-        return estate.getIdAd();
+        return estate.getId();
 
     }
 
     @Override
-    public void DeleteEstate(Long id) {
+    public void DeleteEstate(int id) {
 
 
             estRep.deleteById(id);

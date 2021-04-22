@@ -6,7 +6,7 @@ import com.esprit.dari.entities.AdAppointment.Appointment;
 public interface AppointmentService {
 
     public void UpdateApp(Appointment app,Long AppointmentId);
-    public Long AddAppointment(Appointment app,Long userId,Long adId );
+    public Long AddAppointment(Appointment app,Long userId,int adId );
     public void DeleteAppointment(Long id);
    // public int countEstate();
    // public List<Ad> loadAdByEstateType(String estateType);

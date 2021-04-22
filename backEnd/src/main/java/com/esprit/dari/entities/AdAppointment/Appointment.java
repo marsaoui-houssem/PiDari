@@ -59,8 +59,8 @@ public class Appointment implements Serializable {
         this.notifications = notifications;
     }
 
-    public Appointment(Long idApp, String title, String description, Date dateOfAppointment, Time timeOfAppointment, String appointmentAdress, int stateAppointment, UserDari user, Ad ads) {
-        IdApp = idApp;
+    public Appointment( String title, String description, Date dateOfAppointment, Time timeOfAppointment, String appointmentAdress, int stateAppointment, UserDari user, Ad ads) {
+
         Title = title;
         Description = description;
         this.dateOfAppointment = dateOfAppointment;

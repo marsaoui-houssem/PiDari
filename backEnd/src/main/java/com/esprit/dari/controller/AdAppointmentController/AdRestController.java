@@ -41,14 +41,14 @@ public class AdRestController {
         return EstService.loadAllAds();
     }
     @PutMapping("/updateEstate")
-    public Ad Update(@RequestBody Ad Est,@RequestParam("id") Long adId)
+    public Ad Update(@RequestBody Ad Est,@RequestParam("id") int adId)
     {
 
         EstService.Update(Est,adId);
        return Est;
     }
     @PutMapping("/deleteEstate")
-  public int Delete(@RequestParam("id") Long adId){
+  public int Delete(@RequestParam("id") int adId){
 
         EstService.DeleteEstate(adId);
         return 1000;

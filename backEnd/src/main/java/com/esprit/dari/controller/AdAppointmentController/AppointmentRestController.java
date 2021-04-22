@@ -33,7 +33,7 @@ public class AppointmentRestController {
     @Autowired
     AppointmentService AppService;
     @PostMapping("/addAppointment")
-    public Appointment AddAppointment(@RequestBody Appointment App, @RequestParam("iduser") Long userId, @RequestParam("idad") Long adId){
+    public Appointment AddAppointment(@RequestBody Appointment App, @RequestParam("iduser") Long userId, @RequestParam("idad") int adId){
         Long appointmentId;
 
         NotificationType nottype=NotificationType.Apointment_Suggested;
