@@ -1,10 +1,12 @@
-﻿using FurnituresProject.Models.UserModels;
+﻿
+
+using Model.GestionUser;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FurnituresProject.Models.FurnituesModels
+namespace Model.FurnituresModels
 {
     public class Command
     {
@@ -23,5 +25,7 @@ namespace FurnituresProject.Models.FurnituesModels
 
         public long UserId { get; set; }
         public virtual UserDari MyUserDari { get; set; }
+
+        public List<SoldFurniture> ListSoldFurnitures { get; set; }
     }
 }

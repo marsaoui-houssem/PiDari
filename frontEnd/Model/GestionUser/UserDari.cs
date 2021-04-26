@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Model.FurnituresModels;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -26,6 +27,12 @@ namespace Model.GestionUser
         public String ImageUrl { get; set; }
         [JsonProperty("roleDaris")]
         public virtual ICollection<RoleDari> RoleDaris{ get; set; }
+        [JsonProperty("giftPoints")]
+        public List<GiftPoints> ListGiftPoints { get; set; }
+        [JsonProperty("baskets")]
+        public List<Basket> ListBaskets { get; set; }
+        [JsonProperty("commands")]
+        public List<Command> ListCommands { get; set; }
 
     }
 }

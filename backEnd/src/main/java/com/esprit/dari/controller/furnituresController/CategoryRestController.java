@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/furnitures")
 public class CategoryRestController {
 
     @Autowired
@@ -31,4 +32,26 @@ public class CategoryRestController {
     public void deleteCategory(@PathVariable("categoryId") Long categoryId){
         iCategoryService.deleteCategoryById(categoryId);
     }
+
+    @PutMapping("/modifCategory")
+    @ResponseBody
+    public Long modifCategory(@RequestBody Category category){
+        iCategoryService.modifCategory(category);
+        return category.getCategoryId();
+    }
+
+    @PutMapping("/modifierCategory/{categoryId}")
+    @ResponseBody
+    public Long modifierCategory(@PathVariable("categoryId") Long id,@RequestBody Category category){
+        iCategoryService.modifiererCategory(id,category);
+        return category.getCategoryId();
+    }
+
+    @GetMapping(value = "/getCategoryById/{categoryId}")
+    @ResponseBody
+    public Category findCategoryById(@PathVariable("categoryId")Long id){
+        return iCategoryService.getCategoryById(id);
+    }
+
+
 }

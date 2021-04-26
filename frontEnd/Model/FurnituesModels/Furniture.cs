@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FurnituresProject.Models.FurnituesModels
+namespace Model.FurnituresModels
 {
     public class Furniture
     {
@@ -21,5 +21,7 @@ namespace FurnituresProject.Models.FurnituesModels
         public long? CategoryId { get; set; }
 
         public virtual Category MyCategory { get; set; }
+
+        public List<Basket> ListBaskets { get; set; }
     }
 }

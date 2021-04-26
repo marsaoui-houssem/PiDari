@@ -23,14 +23,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="793cb4ff-cc31-45f0-8482-549abe91ca9d" name="Default Changelist" comment="">
-
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/CreditController/RestControlBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/CreditController/RestControlBank.java" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/DariApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/BasketRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/CategoryRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/CommandRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/FurnitureRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/GiftPointsRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/LivraisonRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/SoldFurnitureRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/TransporterRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/controller/UserDariRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/BasketRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/CommandRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/FurnitureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/GiftPointsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/LivraisonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/SoldFurnitureRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/TransporterRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/dao/UserDariRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Basket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Furniture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/GiftPoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Livraison.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/SoldFurniture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/Transportor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/entities/UserDari.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/BasketServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/CommandServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/FurnitureServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/GiftPointsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/IBasketService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/ICommandService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/IFurnitureService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/IGiftPointsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/ILivraisonService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/ISoldFurnitureService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/ITransporterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/IUserDariService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/LivraisonServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/SoldFurnitureServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/TransporterServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eprit/dari/services/UserDariServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/CategoryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/CategoryRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/CommandRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/CommandRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/FurnitureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/FurnitureRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/GiftPointsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/GiftPointsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/LivraisonRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/LivraisonRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/SoldFurnitureRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/SoldFurnitureRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/TransporterRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/controller/furnituresController/TransporterRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/BasketRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/FurnituresRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/BasketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/BasketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/CommandRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/CommandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/FurnitureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/FurnitureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/GiftPointsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/GiftPointsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/LivraisonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/LivraisonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/SoldFurnitureRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/SoldFurnitureRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/TransporterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/dao/furnituresRepository/TransporterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/Basket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/entities/Furnitures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/furnituresServices/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/furnituresServices/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/furnituresServices/ICategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/esprit/dari/services/furnituresServices/ICategoryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,9 +132,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
@@ -104,10 +163,8 @@
     <option name="myCommands">
       <command value="mvn clean install --update-snapshots" />
       <command value="mvn clean" />
-
       <command value="mvn install" />
       <command value="mvn clean install --update-snapshots" />
-
       <command value="mvn clean install" />
       <command value="mvn install" />
     </option>
@@ -144,7 +201,10 @@
       <workItem from="1618474397144" duration="3294000" />
       <workItem from="1618494532770" duration="377000" />
       <workItem from="1618495181573" duration="327000" />
-
+      <workItem from="1618701536839" duration="1909000" />
+      <workItem from="1618784193607" duration="6141000" />
+      <workItem from="1618946520499" duration="8524000" />
+      <workItem from="1619359211556" duration="14602000" />
     </task>
     <servers />
   </component>
@@ -163,7 +223,6 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dari$DariApplication.ic" NAME="DariApplication Coverage Results" MODIFIED="1617263051359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>

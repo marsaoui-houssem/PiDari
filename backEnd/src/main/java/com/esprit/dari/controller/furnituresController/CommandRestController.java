@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 @RestController
+@RequestMapping("/furnitures")
 public class CommandRestController {
 
     @Autowired

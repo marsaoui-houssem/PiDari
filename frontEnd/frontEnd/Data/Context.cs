@@ -20,5 +20,9 @@ namespace frontEnd.Data
         }
 
         public System.Data.Entity.DbSet<Model.GestionUser.UserDari> UserDaris { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.Category> Categories { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.Furniture> Furnitures { get; set; }
     }
 }

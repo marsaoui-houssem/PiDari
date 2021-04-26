@@ -1,14 +1,18 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FurnituresProject.Models.FurnituesModels
+namespace Model.FurnituresModels
 {
     public class Category
     {
+        [JsonProperty("categoryId")]
         public long CategoryId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        [JsonProperty("name")]
+        public String Name { get; set; }
+        [JsonProperty("description")]
+        public String Description { get; set; }
     }
 }

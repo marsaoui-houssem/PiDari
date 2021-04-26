@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FurnituresProject.Models.FurnituesModels
+namespace Model.FurnituresModels
 {
     public class Transportor
     {
@@ -13,5 +13,7 @@ namespace FurnituresProject.Models.FurnituesModels
         public DateTime Dateofbirth { get; set; }
         public int Phone_number { get; set; }
         public string Secteur { get; set; }
+
+        public List<Command> ListCommands { get; set; }
     }
 }

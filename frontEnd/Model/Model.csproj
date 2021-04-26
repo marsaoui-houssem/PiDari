@@ -49,6 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FurnituesModels\Basket.cs" />
+    <Compile Include="FurnituesModels\Category.cs" />
+    <Compile Include="FurnituesModels\Command.cs" />
+    <Compile Include="FurnituesModels\Furniture.cs" />
+    <Compile Include="FurnituesModels\GiftPoints.cs" />
+    <Compile Include="FurnituesModels\Livraison.cs" />
+    <Compile Include="FurnituesModels\SoldFurniture.cs" />
+    <Compile Include="FurnituesModels\Transportor.cs" />
     <Compile Include="GestionUser\RoleDari.cs" />
     <Compile Include="GestionUser\UserDari.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
