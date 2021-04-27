@@ -23,4 +23,3 @@ C:\Users\Haykel M'kaddem\Desktop\frontEnd\Model\bin\Debug\fr\System.Net.Http.For
 C:\Users\Haykel M'kaddem\Desktop\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\Haykel M'kaddem\Desktop\frontEnd\Model\obj\Debug\Model.dll
 C:\Users\Haykel M'kaddem\Desktop\frontEnd\Model\obj\Debug\Model.pdb
-C:\Users\Haykel M'kaddem\Desktop\frontEnd\Model\obj\Debug\Model.csprojAssemblyReference.cache

@@ -1,5 +1,6 @@
 package com.esprit.dari.controller.furnituresController;
 
+import com.esprit.dari.entities.furnituresEntities.Category;
 import com.esprit.dari.entities.furnituresEntities.Furniture;
 import com.esprit.dari.services.furnituresServices.IFurnitureService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,18 @@ public class FurnitureRestController {
     @ResponseBody
     public List<Furniture> findFurnitures(){
         return iFurnitureService.getAllFurniture();
+    }
+
+    @PutMapping("/modifierFurniture/{furnitureId}")
+    @ResponseBody
+    public Long modifierFurniture(@PathVariable("furnitureId") Long id,@RequestBody Furniture furniture){
+        iFurnitureService.modifiererFurniture(id,furniture);
+        return furniture.getFurnitureId();
+    }
+
+    @GetMapping(value = "/getFurnitureById/{furnitureId}")
+    @ResponseBody
+    public Furniture findCategoryById(@PathVariable("furnitureId")Long id){
+        return iFurnitureService.getFurnitureById(id);
     }
 }

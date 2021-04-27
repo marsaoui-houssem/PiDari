@@ -30,4 +30,25 @@ public class FurnitureServiceImpl implements IFurnitureService{
         return (List<Furniture>) furnitureRepository.findAll();
 
     }
+
+    @Override
+    public Long modifiererFurniture(Long id, Furniture furniture) {
+        Furniture furniture1 = furnitureRepository.findById(id).get();
+        furniture1.setName(furniture.getName());
+        furniture1.setDescription(furniture.getDescription());
+        furniture1.setPrice(furniture.getPrice());
+        furniture1.setHeight(furniture.getHeight());
+        furniture1.setStock(furniture.getStock());
+        furniture1.setWeight(furniture.getWeight());
+        furniture1.setWidth(furniture.getWidth());
+        furniture1.setCategory(furniture.getCategory());
+        furnitureRepository.save(furniture1);
+        return furniture1.getFurnitureId();
+    }
+
+    @Override
+    public Furniture getFurnitureById(Long furnitureId) {
+        Furniture furniture = furnitureRepository.findById(furnitureId).get();
+        return furniture;
+    }
 }

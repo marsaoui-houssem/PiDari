@@ -8,28 +8,30 @@ using System.Web;
 using System.Web.Mvc;
 using Model.FurnituresModels;
 using frontEnd.Data;
+using Service.FurnituresModelsService;
 
 namespace frontEnd.Controllers.FurnituresModelsController
 {
     public class FurnituresController : Controller
     {
         private Context db = new Context();
+        FurnitureService furnitureService = new FurnitureService();
+        CategoryService categoryService = new CategoryService();
 
         // GET: Furnitures
         public ActionResult Index()
         {
-            var furnitures = db.Furnitures.Include(f => f.MyCategory);
-            return View(furnitures.ToList());
+            return View(furnitureService.GetAll());
         }
 
         // GET: Furnitures/Details/5
-        public ActionResult Details(long? id)
+        public ActionResult Details(long id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = furnitureService.getFurnitureById(id);
             if (furniture == null)
             {
                 return HttpNotFound();
@@ -40,7 +42,7 @@ namespace frontEnd.Controllers.FurnituresModelsController
         // GET: Furnitures/Create
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name");
+            ViewBag.CategoryId = new SelectList(categoryService.GetAll(), "categoryId", "name", "description");
             return View();
         }
 
@@ -49,32 +51,33 @@ namespace frontEnd.Controllers.FurnituresModelsController
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FurnitureId,Name,Description,Price,Stock,Weight,Width,Height,CategoryId")] Furniture furniture)
+        public ActionResult Create([Bind(Include = "Name,Description,Price,Stock,Weight,Width,Height,CategoryId")] Furniture furniture)
         {
             if (ModelState.IsValid)
             {
-                db.Furnitures.Add(furniture);
+                ViewBag.CategoryId = new SelectList(categoryService.GetAll(), "categoryId", "name", "description");
+                furniture.MyCategory = categoryService.getCategoryById(1);
+                furnitureService.Add(furniture);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", furniture.CategoryId);
             return View(furniture);
         }
 
         // GET: Furnitures/Edit/5
-        public ActionResult Edit(long? id)
+        public ActionResult Edit(long id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = furnitureService.getFurnitureById(id);
+            ViewBag.CategoryId = new SelectList(categoryService.GetAll(), "categoryId", "name");
             if (furniture == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", furniture.CategoryId);
             return View(furniture);
         }
 
@@ -83,26 +86,24 @@ namespace frontEnd.Controllers.FurnituresModelsController
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FurnitureId,Name,Description,Price,Stock,Weight,Width,Height,CategoryId")] Furniture furniture)
+        public ActionResult Edit(int id,[Bind(Include = "FurnitureId,Name,Description,Price,Stock,Weight,Width,Height,CategoryId")] Furniture furniture)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(furniture).State = EntityState.Modified;
-                db.SaveChanges();
+                furnitureService.Update(id, furniture);
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(db.Categories, "CategoryId", "Name", furniture.CategoryId);
             return View(furniture);
         }
 
         // GET: Furnitures/Delete/5
-        public ActionResult Delete(long? id)
+        public ActionResult Delete(long id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = furnitureService.getFurnitureById(id);
             if (furniture == null)
             {
                 return HttpNotFound();
@@ -115,9 +116,10 @@ namespace frontEnd.Controllers.FurnituresModelsController
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            Furniture furniture = db.Furnitures.Find(id);
-            db.Furnitures.Remove(furniture);
-            db.SaveChanges();
+            Furniture furniture = furnitureService.getFurnitureById(id);
+            furnitureService.deleteFurnitureById(id);
+
+
             return RedirectToAction("Index");
         }
 

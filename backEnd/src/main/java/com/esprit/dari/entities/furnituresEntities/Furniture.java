@@ -27,7 +27,6 @@ public class Furniture implements Serializable {
     private Float width;
     private Float height;
 
-    @JsonIgnore
     @ManyToOne
     private Category category;
 
