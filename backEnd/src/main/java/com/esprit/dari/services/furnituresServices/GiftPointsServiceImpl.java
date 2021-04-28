@@ -88,4 +88,15 @@ public class GiftPointsServiceImpl implements IGiftPointsService{
         }
         return test;
     }
+
+    @Override
+    public Long modifiererGiftPoints(Long id, GiftPoints giftPoints) {
+        return null;
+    }
+
+    @Override
+    public GiftPoints getGiftPointsById(Long giftPointsId) {
+        GiftPoints giftPoints = giftPointsRepository.findById(giftPointsId).get();
+        return giftPoints;
+    }
 }

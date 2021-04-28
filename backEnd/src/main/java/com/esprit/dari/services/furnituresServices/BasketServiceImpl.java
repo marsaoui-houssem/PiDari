@@ -70,4 +70,18 @@ public class BasketServiceImpl implements IBasketService{
         }
         return verifFurniture;
     }
+
+    @Override
+    public Long modifiererBasket(Long id, Basket basket) {
+        Basket basket1 = basketRepository.findById(id).get();
+        basket1.setQuantity(basket.getQuantity());
+        basketRepository.save(basket1);
+        return basket1.getBasketId();
+    }
+
+    @Override
+    public Basket getBasketById(Long basketId) {
+        Basket basket = basketRepository.findById(basketId).get();
+        return basket;
+    }
 }

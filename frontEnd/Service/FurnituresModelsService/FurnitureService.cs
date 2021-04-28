@@ -88,8 +88,5 @@ namespace Service.FurnituresModelsService
             return new List<Furniture>();
         }
 
-
-
-
     }
 }

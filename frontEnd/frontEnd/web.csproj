@@ -139,8 +139,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FurnituresModelsController\BasketsController.cs" />
     <Compile Include="Controllers\FurnituresModelsController\CategoriesController.cs" />
+    <Compile Include="Controllers\FurnituresModelsController\CommandsController.cs" />
     <Compile Include="Controllers\FurnituresModelsController\FurnituresController.cs" />
+    <Compile Include="Controllers\FurnituresModelsController\GiftPointsController.cs" />
+    <Compile Include="Controllers\FurnituresModelsController\TransportorsController.cs" />
     <Compile Include="Controllers\GestionUserController\UserDarisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Context.cs" />
@@ -318,6 +322,27 @@
     <Content Include="Views\Furnitures\Details.cshtml" />
     <Content Include="Views\Furnitures\Edit.cshtml" />
     <Content Include="Views\Furnitures\Index.cshtml" />
+    <Content Include="Views\Furnitures\Create2.cshtml" />
+    <Content Include="Views\Baskets\Create.cshtml" />
+    <Content Include="Views\Baskets\Delete.cshtml" />
+    <Content Include="Views\Baskets\Details.cshtml" />
+    <Content Include="Views\Baskets\Edit.cshtml" />
+    <Content Include="Views\Baskets\Index.cshtml" />
+    <Content Include="Views\Commands\Create.cshtml" />
+    <Content Include="Views\Commands\Delete.cshtml" />
+    <Content Include="Views\Commands\Details.cshtml" />
+    <Content Include="Views\Commands\Edit.cshtml" />
+    <Content Include="Views\Commands\Index.cshtml" />
+    <Content Include="Views\GiftPoints\Create.cshtml" />
+    <Content Include="Views\GiftPoints\Delete.cshtml" />
+    <Content Include="Views\GiftPoints\Details.cshtml" />
+    <Content Include="Views\GiftPoints\Edit.cshtml" />
+    <Content Include="Views\GiftPoints\Index.cshtml" />
+    <Content Include="Views\Transportors\Create.cshtml" />
+    <Content Include="Views\Transportors\Delete.cshtml" />
+    <Content Include="Views\Transportors\Details.cshtml" />
+    <Content Include="Views\Transportors\Edit.cshtml" />
+    <Content Include="Views\Transportors\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -24,5 +24,13 @@ namespace frontEnd.Data
         public System.Data.Entity.DbSet<Model.FurnituresModels.Category> Categories { get; set; }
 
         public System.Data.Entity.DbSet<Model.FurnituresModels.Furniture> Furnitures { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.Basket> Baskets { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.Command> Commands { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.Transportor> Transportors { get; set; }
+
+        public System.Data.Entity.DbSet<Model.FurnituresModels.GiftPoints> GiftPoints { get; set; }
     }
 }

@@ -170,17 +170,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DariApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backEnd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.esprit.dari.DariApplication" />
@@ -217,6 +206,8 @@
       <workItem from="1618946520499" duration="8524000" />
       <workItem from="1619359211556" duration="14602000" />
       <workItem from="1619473355191" duration="8474000" />
+      <workItem from="1619540068323" duration="5148000" />
+      <workItem from="1619560255000" duration="6981000" />
     </task>
     <servers />
   </component>

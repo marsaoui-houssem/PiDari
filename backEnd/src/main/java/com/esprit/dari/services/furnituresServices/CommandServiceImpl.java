@@ -355,5 +355,17 @@ public class CommandServiceImpl implements ICommandService{
         return (List<Command>) commandRepository.findAll();
     }
 
+    @Override
+    public Long modifiererCommand(Long id, Command command) {
+        Command command1 = commandRepository.findById(id).get();
+        return null;
+    }
+
+    @Override
+    public Command getCommandById(Long commandId) {
+        Command command = commandRepository.findById(commandId).get();
+        return command;
+    }
+
 
 }

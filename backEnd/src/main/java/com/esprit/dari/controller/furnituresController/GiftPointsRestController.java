@@ -1,5 +1,6 @@
 package com.esprit.dari.controller.furnituresController;
 
+import com.esprit.dari.entities.furnituresEntities.Furniture;
 import com.esprit.dari.entities.furnituresEntities.GiftPoints;
 import com.esprit.dari.services.furnituresServices.IGiftPointsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class GiftPointsRestController {
     @Autowired
     IGiftPointsService iGiftPointsService;
 
-    @PostMapping("/giftPointsTransfer/{userDariId}/{points}")
+    @GetMapping("/giftPointsTransfer/{userDariId}/{points}")
     @ResponseBody
     public Long giftPointsTransfer(@PathVariable("userDariId") Long userDariId, @PathVariable("points") int points){
         return iGiftPointsService.transferGiftPoints(userDariId, points);
@@ -30,5 +31,18 @@ public class GiftPointsRestController {
     @ResponseBody
     public List<GiftPoints> findGiftPoints(){
         return iGiftPointsService.getAllGiftPoints();
+    }
+
+    @PutMapping("/modifierGiftPoints/{giftPointsId}")
+    @ResponseBody
+    public Long modifierGiftPoints(@PathVariable("giftPointsId") Long id,@RequestBody GiftPoints giftPoints){
+        iGiftPointsService.modifiererGiftPoints(id,giftPoints);
+        return giftPoints.getGiftpointsId();
+    }
+
+    @GetMapping(value = "/getGiftPointsById/{giftPointsId}")
+    @ResponseBody
+    public GiftPoints findGiftPointsById(@PathVariable("giftPointsId")Long id){
+        return iGiftPointsService.getGiftPointsById(id);
     }
 }

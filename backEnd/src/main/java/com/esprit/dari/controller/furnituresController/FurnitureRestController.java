@@ -43,7 +43,7 @@ public class FurnitureRestController {
 
     @GetMapping(value = "/getFurnitureById/{furnitureId}")
     @ResponseBody
-    public Furniture findCategoryById(@PathVariable("furnitureId")Long id){
+    public Furniture findFurnitureById(@PathVariable("furnitureId")Long id){
         return iFurnitureService.getFurnitureById(id);
     }
 }

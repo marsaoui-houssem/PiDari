@@ -48,8 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="FurnituresModelsService\BasketService.cs" />
     <Compile Include="FurnituresModelsService\CategoryService.cs" />
+    <Compile Include="FurnituresModelsService\CommandService.cs" />
     <Compile Include="FurnituresModelsService\FurnitureService.cs" />
+    <Compile Include="FurnituresModelsService\GiftPointsService.cs" />
+    <Compile Include="FurnituresModelsService\TransporterService.cs" />
     <Compile Include="GestionUserService\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\Statics.cs" />

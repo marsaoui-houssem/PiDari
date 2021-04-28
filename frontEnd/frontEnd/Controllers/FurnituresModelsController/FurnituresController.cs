@@ -65,6 +65,27 @@ namespace frontEnd.Controllers.FurnituresModelsController
             return View(furniture);
         }
 
+        public ActionResult Create2()
+        {
+            ViewBag.CategoryId = new SelectList(categoryService.GetAll(), "categoryId", "name", "description");
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create2([Bind(Include = "CategoryId")] long id , [Bind(Include = "Name,Description,Price,Stock,Weight,Width,Height")] Furniture furniture)
+        {
+            if (ModelState.IsValid)
+            {
+                ViewBag.CategoryId = new SelectList(categoryService.GetAll(), "categoryId", "name", "description");
+                furniture.MyCategory = categoryService.getCategoryById(id);
+                furnitureService.Add(furniture);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(furniture);
+        }
         // GET: Furnitures/Edit/5
         public ActionResult Edit(long id)
         {

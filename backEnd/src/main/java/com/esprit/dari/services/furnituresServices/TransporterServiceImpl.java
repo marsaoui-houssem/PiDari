@@ -36,18 +36,18 @@ public class TransporterServiceImpl implements ITransporterService{
 
 
     @Override
-    public Long ajouterCommand(Transportor transportor) {
+    public Long ajouterTransportor(Transportor transportor) {
         transporterRepository.save(transportor);
         return transportor.getTransporterId();
     }
 
     @Override
-    public void deleteCommandById(Long transportorId) {
+    public void deleteTransportorById(Long transportorId) {
         transporterRepository.deleteById(transportorId);
     }
 
     @Override
-    public List<Transportor> getAllCommand() {
+    public List<Transportor> getAllTransportor() {
         return (List<Transportor>) transporterRepository.findAll();
     }
 
@@ -93,5 +93,22 @@ public class TransporterServiceImpl implements ITransporterService{
         }else {
             System.out.println("il faut que le transporteur travail dans le meme ville du client !! ");
         }
+    }
+
+    @Override
+    public Long modifiererTransportor(Long id, Transportor transportor) {
+        Transportor transportor1 = transporterRepository.findById(id).get();
+        transportor1.setFirstname(transportor.getFirstname());
+        transportor1.setLastname(transportor.getLastname());
+        transportor1.setDateofbirth(transportor.getDateofbirth());
+        transportor1.setPhone_number(transportor.getPhone_number());
+        transporterRepository.save(transportor1);
+        return transportor1.getTransporterId();
+    }
+
+    @Override
+    public Transportor getTransportorById(Long transportorId) {
+        Transportor transportor = transporterRepository.findById(transportorId).get();
+        return transportor;
     }
 }
