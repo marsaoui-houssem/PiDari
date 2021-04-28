@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Model.Abonnement.Abonnement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomAbon)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.typeAbon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dureAbonn)
+        </th>
+     
+   
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomAbon)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.typeAbon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dureAbonn)
+        </td>
+  
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.idAbon }) |
+            @Html.ActionLink("Details", "Details", new { id = item.idAbon }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.idAbon }) |
+            @Html.ActionLink(" les assurence ", "getAllAssubyAbon", new { idAbon = item.idAbon }) |
+            @Html.ActionLink(" les service ", "getAllServbyAbon", new { idAbon = item.idAbon }) 
+        </td>
+    </tr>
+}
+
+</table>

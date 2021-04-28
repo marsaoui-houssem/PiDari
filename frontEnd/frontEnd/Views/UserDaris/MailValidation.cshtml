@@ -1,0 +1,35 @@
+﻿<span class="link" onclick="javascript:showWindow('url');">Click Me</span>
+
+
+
+<script>
+    var url = new URL(urlString);
+    // OR: If you want to use the current page's URL
+    var url = window.location;
+
+    var access_token = new URLSearchParams(url.search).get('access_token');
+
+    function post_en_url(url, parametres) {
+        url = http://localhost:8085/dari/user/confirmaccount;
+        parametres = access_token ;
+        //Création dynamique du formulaire
+        var form = document.createElement(form);
+        form.setAttribute(method, POST);
+        form.setAttribute(action, url);
+        //Ajout des paramètres sous forme de champs cachés
+        for (var cle in parametres) {
+            if (parametres.hasOwnProperty(cle)) {
+                var champCache = document.createElement(input);
+                champCache.setAttribute(type, hidden);
+                champCache.setAttribute(name, cle);
+                champCache.setAttribute(value, parametres[cle]);
+                form.appendChild(champCache);
+            }
+        }
+        //Ajout du formulaire à la page et soumission du formulaire
+        document.body.appendChild(form);
+        form.submit();
+    }
+
+
+</script>

@@ -13,5 +13,7 @@ namespace Model.GestionUser
         public long Id { get; set; }
         [JsonProperty("name")]
         public String Name { get; set; }
+
+        public virtual UserDari userDari { get; set; }
     }
 }

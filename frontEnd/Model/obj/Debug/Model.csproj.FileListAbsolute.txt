@@ -11,3 +11,42 @@ C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\Newtonsoft.Json.xml
 C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\goldzeo\source\repos\frontEnd\Model\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
 C:\Users\goldzeo\source\repos\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\Model.dll.config
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\Model.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\Model.pdb
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.xml
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.xml
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\obj\Debug\Model.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd\frontEnd\Model\obj\Debug\Model.pdb
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.dll.config
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.pdb
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.xml
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.xml
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.dll
+D:\annee scolaire 2021\etude_semestre2_2021\PI\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.pdb
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.dll.config
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.dll
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Model.pdb
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\bin\Debug\fr\System.Net.Http.Formatting.resources.dll
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.dll
+C:\Users\goldzeo\Downloads\frontEnd_gdid\frontEnd_gdid\frontEnd\frontEnd\Model\obj\Debug\Model.pdb

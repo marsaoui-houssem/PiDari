@@ -139,6 +139,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AbonnementController\AbonnementsController.cs" />
+    <Compile Include="Controllers\AbonnementController\AssurencesController.cs" />
+    <Compile Include="Controllers\AbonnementController\OffreServicesController.cs" />
+    <Compile Include="Controllers\GestionUserController\TrasabilitiesController.cs" />
     <Compile Include="Controllers\GestionUserController\UserDarisController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Context.cs" />
@@ -306,6 +310,31 @@
     <Content Include="Views\UserDaris\Details.cshtml" />
     <Content Include="Views\UserDaris\Edit.cshtml" />
     <Content Include="Views\UserDaris\Index.cshtml" />
+    <Content Include="Views\Assurences\Create.cshtml" />
+    <Content Include="Views\Assurences\Delete.cshtml" />
+    <Content Include="Views\Assurences\Details.cshtml" />
+    <Content Include="Views\Assurences\Edit.cshtml" />
+    <Content Include="Views\Assurences\Index.cshtml" />
+    <Content Include="Views\Abonnements\Create.cshtml" />
+    <Content Include="Views\Abonnements\Delete.cshtml" />
+    <Content Include="Views\Abonnements\Details.cshtml" />
+    <Content Include="Views\Abonnements\Edit.cshtml" />
+    <Content Include="Views\Abonnements\Index.cshtml" />
+    <Content Include="Views\OffreServices\Create.cshtml" />
+    <Content Include="Views\OffreServices\Delete.cshtml" />
+    <Content Include="Views\OffreServices\Details.cshtml" />
+    <Content Include="Views\OffreServices\Edit.cshtml" />
+    <Content Include="Views\OffreServices\Index.cshtml" />
+    <Content Include="Views\Abonnements\getAllAssubyAbon.cshtml" />
+    <Content Include="Views\Abonnements\getAllServbyAbon.cshtml" />
+    <Content Include="Views\UserDaris\Login.cshtml" />
+    <Content Include="Views\UserDaris\Login1.cshtml" />
+    <Content Include="Views\UserDaris\MailValidation.cshtml" />
+    <Content Include="Views\Trasabilities\Create.cshtml" />
+    <Content Include="Views\Trasabilities\Delete.cshtml" />
+    <Content Include="Views\Trasabilities\Details.cshtml" />
+    <Content Include="Views\Trasabilities\Edit.cshtml" />
+    <Content Include="Views\Trasabilities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

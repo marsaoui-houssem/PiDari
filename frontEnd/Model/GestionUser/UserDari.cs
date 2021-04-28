@@ -10,12 +10,18 @@ namespace Model.GestionUser
         [JsonProperty("id")]
         [Key]
         public long userId { get; set; }
+        [JsonProperty("username")]
+        public String UserName { get; set; }
         [JsonProperty("firstName")]
         public String FirstName { get; set; }
         [JsonProperty("lastName")]
         public String LastName { get; set; }
         [JsonProperty("email")]
         public String Email { get; set; }
+
+        [JsonProperty("repassword")]
+        public String Repassword { get; set; }
+
         [JsonProperty("password")]
         public String Password { get; set; }
         [JsonProperty("PhoneNumber")]
@@ -26,6 +32,9 @@ namespace Model.GestionUser
         public String ImageUrl { get; set; }
         [JsonProperty("roleDaris")]
         public virtual ICollection<RoleDari> RoleDaris{ get; set; }
+
+        [JsonProperty("abonnements")]
+        public virtual ICollection<Abonnement.Abonnement> Abonnements { get; set; }
 
     }
 }

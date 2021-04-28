@@ -1,0 +1,82 @@
+﻿@model Model.Abonnement.OffreService
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>OffreService</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nomServ)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nomServ)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.descSer)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.descSer)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dureService)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dureService)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.prixServ)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.prixServ)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.datedebutService)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.datedebutService)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dateFintService)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dateFintService)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.typeservice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.typeservice)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.idServ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Model.Abonnement.OffreService>
+
+@{
+    ViewBag.Title = "getAllServbyAbon";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>getAllServbyAbon</title>
+</head>
+<body>
+   
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nomServ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descSer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dureService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prixServ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datedebutService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateFintService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeService)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomServ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descSer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dureService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prixServ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datedebutService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateFintService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeService)
+            </td>
+          
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

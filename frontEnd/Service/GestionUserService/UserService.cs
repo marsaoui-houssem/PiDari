@@ -19,47 +19,9 @@ namespace Service
 
         }
 
-        public String authenticate(UserDari u)
-        {
-            try
-            {
-                var APIResponse = httpClient.PostAsJsonAsync<UserDari>(Statics.baseAddress + "user/authenticate/", u).Result;
+       
 
-
-
-                if (APIResponse.IsSuccessStatusCode)
-                {
-
-                    String user = APIResponse.Content.ReadAsStringAsync().ToString();
-                    return user;
-                }
-               
-            }
-            catch
-            {
-                return "user non authenticated";
-            }
-            return "u";
-        }
-
-
-        public IEnumerable<UserDari> GetAll()
-        {
-           
-            var response = httpClient.GetAsync(Statics.baseAddress + "useradmin/findAll").Result;
-
-
-            if (response.IsSuccessStatusCode)
-            {
-
-                var users = response.Content.ReadAsAsync<IEnumerable<UserDari>>().Result;
-                return users;
-            }
-            return new List<UserDari>();
-
-        }
-
-        public UserDari GetById(int id)
+        public UserDari GetById(long id)
         {
 
             UserDari user = null;
@@ -83,7 +45,7 @@ namespace Service
 
             try
             {
-                var APIResponse = httpClient.DeleteAsync(Statics.baseAddress + "useradmin/delete/" + id);
+                var APIResponse = httpClient.DeleteAsync(Statics.baseAddress + "getAllUsers/" + id);
 
                 return true;
             }

@@ -1,40 +1,144 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Model.GestionUser;
 using frontEnd.Data;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Service;
+using System.Collections.Generic;
 
 namespace frontEnd.Controllers.GestionUserController
 {
     public class UserDarisController : Controller
     {
+
+
+
+        UserService userservice = new UserService();
+
         private Context db = new Context();
 
-        // GET: UserDaris
+
         public ActionResult Index()
         {
-            return View(db.UserDaris.ToList());
+            IEnumerable<UserDari> user = null;
+            using (var client = new HttpClient())
+            {
+                //var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                //client.DefaultRequestHeaders.Authorization = newhttp://localhost:8085/dari/ AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                client.BaseAddress = new Uri("http://localhost:8085/dari/");
+                var responseTask = client.GetAsync("user/getAllUsers/");
+                responseTask.Wait();
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readJob = result.Content.ReadAsAsync<IList<UserDari>>();
+                    readJob.Wait();
+                    user = readJob.Result;
+                }
+                else
+                {
+                    //return the error
+                    user = Enumerable.Empty<UserDari>();
+                    ModelState.AddModelError(String.Empty, "error");
+                }
+
+            }
+            return View(user);
+
+        }
+   // GET: Banks/Details/5
+        public ActionResult Details(long id)
+        {
+            UserDari user = null;
+            using (var client = new HttpClient())
+            {
+                //var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                //client.DefaultRequestHeaders.Authorization = newhttp://localhost:8085/dari/ AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                client.BaseAddress = new Uri("http://localhost:8085/dari/");
+                var responseTask = client.GetAsync("user/getbyId/" + id);
+                responseTask.Wait();
+                var result = responseTask.Result;
+
+                
+                if (result.IsSuccessStatusCode)
+
+                {
+                    var readJob = result.Content.ReadAsAsync<UserDari>();
+                    readJob.Wait();
+
+                    user = readJob.Result;
+                }
+            }
+           
+            return View(user);
         }
 
-        // GET: UserDaris/Details/5
-        public ActionResult Details(long? id)
+
+        public ActionResult Login1()
+
+
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            UserDari userDari = db.UserDaris.Find(id);
-            if (userDari == null)
-            {
-                return HttpNotFound();
-            }
-            return View(userDari);
+
+
+            return View();
         }
+
+        public ActionResult Login()
+
+
+        {
+
+
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Login(Tokken tkn)  //JwtRequest model 3emluo ena maoujoud e5er lfichier
+
+
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(tkn), System.Text.Encoding.UTF8, "application/json");
+
+                using (HttpResponseMessage response1 = await httpClient.PostAsync("http://localhost:8085/dari/login", stringContent))
+                {
+
+                    String myTok = await response1.Content.ReadAsStringAsync();
+
+                    if (myTok == "Invalid credentials")
+                    {
+                        ViewBag.mssg = "incorrct usr";
+                    }
+
+                    HttpContext.Session.Add("access_token", myTok); //storit etoken fe session
+                    var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];//oki
+
+
+                    ViewBag.bareer = stringContent;
+                    ViewBag.bareerConsumedResps = stringContent;
+
+                    ViewBag.bareerConsumed = myTok;
+                    ViewBag.bareeSession = _AccessToken;
+                }
+            }
+
+            return View();
+        }
+
+
 
         // GET: UserDaris/Create
         public ActionResult Create()
@@ -47,15 +151,23 @@ namespace frontEnd.Controllers.GestionUserController
         // plus de détails, consultez https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "userId,FirstName,LastName,Email,Password,PhoneNumber,Activated,ImageUrl")] UserDari userDari)
+        public ActionResult Create(UserDari userDari)
         {
-            if (ModelState.IsValid)
-            {
-                db.UserDaris.Add(userDari);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
 
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("http://localhost:8085/dari/user/register");
+                var postJob = client.PostAsJsonAsync<UserDari>("register", userDari);
+                postJob.Wait();
+                // return View();
+                var postResult = postJob.Result;
+                DateTime dateCreation = DateTime.Now;
+
+                if (postResult.IsSuccessStatusCode)
+
+                    return RedirectToAction("Home");
+            }
+            //ModelState.AddModelError(string.Empty, "Server occured errors. Please check with admin!");
             return View(userDari);
         }
 
@@ -110,11 +222,34 @@ namespace frontEnd.Controllers.GestionUserController
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(long id)
         {
-            UserDari userDari = db.UserDaris.Find(id);
-            db.UserDaris.Remove(userDari);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            UserDari user = null;
+            using (var client = new HttpClient())
+            {
+                //var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                //client.DefaultRequestHeaders.Authorization = newhttp://localhost:8085/dari/ AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                var _AccessToken = System.Web.HttpContext.Current.Session["access_token"];
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", (string)_AccessToken);
+                client.BaseAddress = new Uri("http://localhost:8085/dari/");
+                var responseTask = client.GetAsync("user/getbyId/" + id);
+                responseTask.Wait();
+                var result = responseTask.Result;
+
+
+                if (result.IsSuccessStatusCode)
+
+                {
+                    var readJob = result.Content.ReadAsAsync<UserDari>();
+                    readJob.Wait();
+
+                    user = readJob.Result;
+                }
+
+                client.BaseAddress = new Uri("http://localhost:8085/dari/");
+                var deleateTask = client.DeleteAsync("user/getbyId/" + id).Result;
+                responseTask.Wait();
+            }
+            return View();
+            }
 
         protected override void Dispose(bool disposing)
         {

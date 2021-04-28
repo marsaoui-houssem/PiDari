@@ -1,0 +1,74 @@
+﻿@model Model.Abonnement.Abonnement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Abonnement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomAbon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomAbon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descriptionAbon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descriptionAbon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.typeAbon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.typeAbon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dureAbonn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dureAbonn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateDebut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateDebut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datefint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datefint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prix)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idAbon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -48,7 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abonnement\Abonnement.cs" />
+    <Compile Include="Abonnement\Assurence.cs" />
+    <Compile Include="Abonnement\OffreService.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="GestionUser\CallEtats.cs" />
+    <Compile Include="GestionUser\Trasability.cs" />
+    <Compile Include="GestionUser\Tokken.cs" />
     <Compile Include="GestionUser\RoleDari.cs" />
     <Compile Include="GestionUser\UserDari.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,74 @@
+﻿@model Model.Abonnement.Assurence
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Assurence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomAssu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomAssu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descAssu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descAssu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dureAss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dureAss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateDeburAssu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateDeburAssu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateFintAssu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateFintAssu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prixAss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prixAss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeAssurence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeAssurence)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idAssu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

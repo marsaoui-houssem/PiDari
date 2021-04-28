@@ -20,5 +20,15 @@ namespace frontEnd.Data
         }
 
         public System.Data.Entity.DbSet<Model.GestionUser.UserDari> UserDaris { get; set; }
+
+        public System.Data.Entity.DbSet<Model.Abonnement.Abonnement> Abonnements { get; set; }
+
+        public System.Data.Entity.DbSet<Model.Abonnement.Assurence> Assurences { get; set; }
+
+        public System.Data.Entity.DbSet<Model.Abonnement.OffreService> OffreServices { get; set; }
+
+        public System.Data.Entity.DbSet<Model.GestionUser.RoleDari> RoleDaris { get; set; }
+
+        public System.Data.Entity.DbSet<Model.GestionUser.Trasability> Trasabilities { get; set; }
     }
 }

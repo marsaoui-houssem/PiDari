@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Model.Abonnement.OffreService>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nomServ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descSer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dureService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prixServ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.datedebutService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dateFintService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.typeservice)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomServ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.descSer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dureService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prixServ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datedebutService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dateFintService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.typeservice)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idServ}) |
+                @Html.ActionLink("Details", "Details", new { id=item.idServ }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idServ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
